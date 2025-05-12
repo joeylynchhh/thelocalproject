@@ -1,0 +1,615 @@
+.advertisePage {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primary);
+    color: #333;
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    margin-bottom: 6rem;
+    padding: 6rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero h1 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 4rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  .heroContent {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .intro {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    line-height: 1.3;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    color: #555;
+  }
+  
+  .ctaContainer {
+    margin-top: 2rem;
+  }
+  
+  .ctaButton {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border: 1px solid #333;
+    color: #333;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+  }
+  
+  .ctaButton:hover {
+    background-color: #333;
+    color: white;
+  }
+  
+  /* Audience Section */
+  .audienceSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-bottom: 8rem;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 40px;
+    box-sizing: border-box;
+  }
+  
+  .audienceType {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .audienceContent {
+    padding: 2rem 0 3rem;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  
+  .audienceType h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  .audienceType p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+  }
+  
+  .imageContainer {
+    width: 100%;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+  }
+  
+  .placeholderImageBox {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  /* Statistics Section */
+  .statisticsSection {
+    text-align: center;
+    margin-bottom: 8rem;
+    padding: 6rem 2rem;
+    background-color: #fff;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  
+  .statisticsSection h2 {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-bottom: 4rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #333;
+  }
+  
+  .statIntro {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+    font-weight: 300;
+    color: #333;
+  }
+  
+  .statSubIntro {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    color: #666;
+    font-weight: 300;
+  }
+  
+  .statTotal {
+    margin: 2rem 0 5rem;
+    text-align: center;
+  }
+  
+  .statTotal .statNumber {
+    display: block;
+    font-size: 5.5rem;
+    font-weight: 200;
+    margin-bottom: 1rem;
+    line-height: 1;
+    color: #333;
+    letter-spacing: -1px;
+  }
+  
+  .statTotal .statLabel {
+    font-size: 0.9rem;
+    margin: 0;
+    font-weight: 300;
+    color: #666;
+    text-align: center;
+  }
+  
+  .statsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5rem 6rem;
+    margin: 0 auto 4rem;
+    max-width: 1300px;
+    padding: 0 2rem;
+  }
+  
+  .statItem {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    min-width: 200px;
+  }
+  
+  .statNumber {
+    font-size: 2.2rem;
+    font-weight: 200;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+    color: #333;
+    letter-spacing: -0.5px;
+  }
+  
+  .statLabel {
+    font-size: 0.85rem;
+    text-align: left;
+    line-height: 1.4;
+    margin: 0;
+    color: #666;
+    font-weight: 300;
+  }
+  
+  .statSource {
+    font-size: 0.75rem;
+    margin: 2rem 0 3rem;
+    color: #888;
+    font-style: italic;
+    font-weight: 300;
+  }
+  
+  .ctaContainer {
+    margin-top: 1rem;
+  }
+  
+  /* Advertising Options */
+  .advertisingOptions {
+    margin-bottom: 8rem;
+    padding: 0 225px;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  .advertisingOptions h2 {
+    font-size: 0.8rem;
+    font-weight: 200;
+    margin-bottom: 5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #333;
+  }
+  
+  .optionsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 325px);
+    gap: 0 80px;
+    max-width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  
+  .optionItem {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    width: 325px;
+  }
+  
+  .optionItem h4 {
+    font-size: 0.85rem;
+    font-weight: 300;
+    margin-top: 1.2rem;
+    margin-bottom: 0;
+    color: #333;
+    text-align: center;
+    line-height: 1.5;
+  }
+  
+  .optionImage {
+    width: 325px;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Brands Section */
+  .brandsSection {
+    margin-bottom: 4rem;
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .brandsSection h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+  }
+  
+  .brandsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 2rem;
+  }
+  
+  .brandLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+  }
+  
+  .logoPlaceholder {
+    width: 100px;
+    height: 50px;
+    background-color: #eee;
+  }
+  
+  /* Testimonials Section */
+  .testimonialsSection {
+    margin-bottom: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .testimonialsSection h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .testimonialGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .testimonial {
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  }
+  
+  .testimonialRole {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  
+  .testimonialText {
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .testimonialAuthor {
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+  }
+  
+  .testimonialPosition {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  /* Contact Section */
+  .contactSection {
+    margin-bottom: 6rem;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .contactSection h2 {
+    font-size: 0.8rem;
+    font-weight: 200;
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #333;
+    text-align: center;
+  }
+  
+  .contactContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+  
+  .contactImageContainer {
+    height: 100%;
+    min-height: 450px;
+  }
+  
+  .contactFormContainer {
+    padding: 2rem 5rem;
+    background-color: #fff;
+  }
+  
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  
+  .formGroup label {
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 300;
+  }
+  
+  .contactForm input,
+  .contactForm select,
+  .contactForm textarea {
+    width: 100%;
+    padding: 0.4rem 0;
+    border: none;
+    border-bottom: 1px solid #eee;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: #333;
+    background-color: transparent;
+    transition: border-color 0.3s;
+  }
+  
+  .contactForm input::placeholder,
+  .contactForm select::placeholder,
+  .contactForm textarea::placeholder {
+    color: #bbb;
+  }
+  
+  .contactForm input:focus,
+  .contactForm select:focus,
+  .contactForm textarea:focus {
+    outline: none;
+    border-color: #999;
+  }
+  
+  .contactForm textarea {
+    resize: vertical;
+    min-height: 75px;
+  }
+  
+  .submitButton {
+    margin-top: 0.75rem;
+    padding: 0.7rem 2rem;
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #333;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    align-self: center;
+    width: 180px;
+  }
+  
+  .submitButton:hover {
+    background-color: #333;
+    color: white;
+  }
+  
+  .successMessage {
+    text-align: center;
+    padding: 3rem;
+  }
+  
+  .successMessage h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .successMessage p {
+    font-size: 1.1rem;
+    color: #666;
+  }
+  
+  .scrollTopButton {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #333;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    z-index: 100;
+  }
+  
+  .scrollTopButton:hover {
+    background-color: #555;
+    transform: translateY(-5px);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1600px) {
+    .advertisingOptions {
+      padding: 0 120px;
+    }
+    
+    .optionsGrid {
+      grid-template-columns: repeat(3, 300px);
+      gap: 0 60px;
+    }
+    
+    .optionItem, .optionImage {
+      width: 300px;
+    }
+    
+    .optionImage {
+      height: 420px;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .advertisingOptions {
+      padding: 0 60px;
+    }
+    
+    .optionsGrid {
+      grid-template-columns: repeat(2, 300px);
+      gap: 40px;
+    }
+    
+    .statsGrid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5rem 8rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .advertisingOptions {
+      padding: 0 30px;
+    }
+    
+    .optionsGrid {
+      grid-template-columns: 300px;
+    }
+    
+    .optionImage {
+      height: 400px;
+    }
+    
+    .audienceSection {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      padding: 0 20px;
+    }
+    
+    .imageContainer {
+      height: 350px;
+    }
+    
+    .contactContainer {
+      grid-template-columns: 1fr;
+    }
+    
+    .contactImageContainer {
+      min-height: 300px;
+    }
+    
+    .contactFormContainer {
+      padding: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .statsGrid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    
+    .statTotal .statNumber {
+      font-size: 3.5rem;
+    }
+  } 

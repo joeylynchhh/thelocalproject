@@ -1,0 +1,763 @@
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+  }
+  
+  .hero {
+    text-align: center;
+    margin-bottom: 100px;
+    padding: 4rem 0 0;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', serif;
+    color: #222;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    line-height: 1.7;
+    color: #444;
+    padding: 0;
+    font-weight: 300;
+  }
+  
+  .featured {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 5rem;
+    align-items: center;
+  }
+  
+  .featuredContent {
+    flex: 1;
+  }
+  
+  .featuredContent h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: #999;
+  }
+  
+  .featuredContent h3 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+  }
+  
+  .featuredContent p {
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #555;
+  }
+  
+  .featuredPrice {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  
+  .featuredImage {
+    flex: 1;
+  }
+  
+  .featuredImage img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #333;
+  }
+  
+  .publicationsGrid {
+    margin-bottom: 5rem;
+  }
+  
+  .publicationsGrid h2 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .publicationCard {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .imageContainer {
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+  
+  .imageContainer img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .imageContainer img:hover {
+    transform: scale(1.05);
+  }
+  
+  .publicationCard h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+  }
+  
+  .publicationCard p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+  
+  .price {
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  
+  .smallButton {
+    background-color: transparent;
+    color: #000;
+    border: 1px solid #000;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+    align-self: flex-start;
+  }
+  
+  .smallButton:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .subscription {
+    background-color: #f8f8f8;
+    padding: 3rem;
+    text-align: center;
+  }
+  
+  .subscription h2 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+  }
+  
+  .subscription p {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  .subscriptionOptions {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+  
+  .option {
+    background-color: #fff;
+    padding: 2rem;
+    min-width: 250px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .option h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+  }
+  
+  .option p {
+    margin-bottom: 1.5rem;
+    color: #666;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .featured {
+      flex-direction: column-reverse;
+    }
+    
+    .subscriptionOptions {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .hero h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  /* Publications display - EXACT match to reference image */
+  .publicationsDisplay {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin: 0 auto 0;
+    background-color: transparent;
+    padding: 0;
+    max-width: 1400px;
+  }
+  
+  .publicationItem {
+    width: 45%;
+    height: 600px;
+    position: relative;
+    background-color: #e6e6e6;
+  }
+  
+  .publicationItem img {
+    position: absolute;
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Latest Issue Section - Matching reference */
+  .latestIssue {
+    text-align: center;
+    max-width: 1000px;
+    margin: 6rem auto;
+    padding: 0 1rem;
+  }
+  
+  .latestIssueHeader {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+  
+  .issueTitle {
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+    font-family: 'Times New Roman', serif;
+    color: #222;
+  }
+  
+  .issueSubtitle {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    font-family: 'Times New Roman', serif;
+    color: #222;
+  }
+  
+  .issueDescription {
+    margin-bottom: 3rem;
+  }
+  
+  .issueDescription p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+  }
+  
+  .orderButton {
+    background-color: transparent;
+    color: #000;
+    border: 1px solid #000;
+    padding: 0.8rem 3rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 400;
+    border-radius: 50px;
+  }
+  
+  .orderButton:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .booksDisplay {
+    background-color: #e6e6e6;
+    padding: 170px 0;
+    margin: 100px auto;
+    width: 80%;
+  }
+  
+  .bookContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .book {
+    width: 220px;
+    background-color: #e6e6e6;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .bookHeader {
+    color: white;
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
+  
+  .bookTitle {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  
+  .bookImage {
+    width: 100%;
+    height: auto;
+    margin: 15px 0;
+    display: block;
+  }
+  
+  .bookSubtitle {
+    color: white;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+  
+  .book:nth-child(1) {
+    background-color: #9a9a9a;
+  }
+  
+  .book:nth-child(2) {
+    background-color: #a8c5d6;
+  }
+  
+  .book:nth-child(3) {
+    background-color: #a3b1a0;
+  }
+  
+  /* Habitats Section - Updated to match reference exactly */
+  .habitats {
+    text-align: center;
+    max-width: 1000px;
+    margin: 120px auto;
+    padding: 0 1rem;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .habitatsHeader {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: #666;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+  }
+  
+  .habitatsTitle {
+    font-size: 4rem;
+    font-weight: 300;
+    margin-bottom: 3.5rem;
+    font-family: 'Times New Roman', serif;
+    color: #222;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+  
+  .habitatsContent {
+    margin-bottom: 4rem;
+  }
+  
+  .habitatsContent p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .habitats .orderButton {
+    margin-bottom: 6rem;
+  }
+  
+  .publishedSection {
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    position: relative;
+  }
+  
+  .publishedContent {
+    width: 50%;
+    padding: 40px 120px 0 120px;
+    text-align: left;
+  }
+  
+  .publishedHeader {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: #666;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+  }
+  
+  .publishedTitle {
+    font-size: 4.5rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    font-family: 'Times New Roman', serif;
+    color: #222;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+  
+  .publishedText {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 3rem;
+    font-weight: 300;
+    max-width: 460px;
+  }
+  
+  .publishedImage {
+    width: 50%;
+    background-color: #e6e6e6;
+    padding: 120px 100px;
+  }
+  
+  .publishedImage img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .subscribeButton {
+    background-color: transparent;
+    color: #000;
+    border: 1px solid #000;
+    padding: 0.8rem 3rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 400;
+    border-radius: 50px;
+  }
+  
+  .subscribeButton:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  /* All Books Section */
+  .allBooksSection {
+    padding: 4rem 0 6rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .allBooksHeader {
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 3rem;
+    font-weight: 400;
+  }
+  
+  .allBooksGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .bookItem {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+  }
+  
+  .bookItem:hover {
+    opacity: 0.9;
+  }
+  
+  .bookItem:first-child .bookItemImage {
+    background-color: #e6e6e6; /* Light gray for the left book */
+  }
+  
+  .bookItem:last-child .bookItemImage {
+    background-color: #3d2c20; /* Dark brown for the right book */
+  }
+  
+  .bookItemImage {
+    margin-bottom: 1.5rem;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Fixed height to match the image */
+  }
+  
+  .bookItemImage img {
+    max-width: 70%;
+    max-height: 80%;
+    object-fit: contain;
+    display: block;
+  }
+  
+  .bookItemTitle {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    padding: 0;
+  }
+  
+  .bookItemOrder {
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    color: #666;
+    text-align: left;
+    padding: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .allBooksGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Bundles Section */
+  .bundlesSection {
+    padding: 4rem 0 6rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .bundlesHeader {
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  
+  .bundlesDescription {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    font-weight: 300;
+  }
+  
+  .bundlesGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .bundleItem {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+  }
+  
+  .bundleItem:hover {
+    opacity: 0.9;
+  }
+  
+  .bundleItemImage {
+    margin-bottom: 1.5rem;
+    background-color: #e6e6e6;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+  }
+  
+  .bundleItemImage img {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+  
+  .bundleItemPrice {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+    text-align: left;
+  }
+  
+  .bundleItemTitle {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+    text-align: left;
+  }
+  
+  .bundleItemSubtitle {
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    color: #666;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  
+  @media (max-width: 1024px) {
+    .bundlesGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .bundlesGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* All Issues Section */
+  .allIssuesSection {
+    padding: 4rem 0 6rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .allIssuesHeader {
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  
+  .allIssuesGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .issueItem {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+  }
+  
+  .issueItem:hover {
+    opacity: 0.9;
+  }
+  
+  .issueItemImage {
+    margin-bottom: 1.5rem;
+    background-color: #e6e6e6;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+  }
+  
+  .issueItemImage img {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+  
+  .issueItemTitle {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+    text-align: left;
+  }
+  
+  .issueItemOrder {
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    color: #666;
+    text-align: left;
+  }
+  
+  @media (max-width: 1024px) {
+    .allIssuesGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .allIssuesGrid {
+      grid-template-columns: 1fr;
+    }
+  } 

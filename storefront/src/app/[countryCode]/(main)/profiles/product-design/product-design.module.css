@@ -1,0 +1,402 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 0;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+    font-weight: normal;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .profileGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+  }
+  
+  @media (min-width: 640px) {
+    .profileGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .profileGrid {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+  
+  .categoryNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .categoryLink {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+  }
+  
+  .categoryLink:hover {
+    color: #000;
+  }
+  
+  .dot {
+    color: #666;
+    margin: 0 4px;
+  }
+  
+  .divider {
+    width: 100%;
+    height: 1px;
+    background-color: #e5e5e5;
+    margin: 40px 0;
+  }
+  
+  .jumpToSection {
+    margin: 40px 0;
+    text-align: center;
+  }
+  
+  .jumpToLabel {
+    color: #666;
+    font-size: 0.9rem;
+    margin-right: 12px;
+  }
+  
+  .alphabetNav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 12px;
+  }
+  
+  .letterLink {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0 4px;
+    transition: color 0.2s ease;
+  }
+  
+  .letterLink:hover {
+    color: #000;
+  }
+  
+  .letterSpace {
+    width: 4px;
+  }
+  
+  .letterHeader {
+    display: none;
+  }
+  
+  .profileSection {
+    margin: 60px 0;
+  }
+  
+  .letterCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    aspect-ratio: 1;
+    background-color: white;
+    border: none;
+  }
+  
+  .letterCard h2 {
+    font-size: 5rem;
+    font-weight: normal;
+    color: #000;
+    margin: 0;
+    font-family: serif;
+  }
+  
+  .profileSection:nth-child(3) .letterHeader {
+    display: none;
+  }
+  
+  /* Newsletter Section Styles */
+  .newsletterSection {
+    max-width: 800px;
+    margin: 80px auto;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .newsletterTitle {
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin-bottom: 0;
+    letter-spacing: 0.5px;
+  }
+  
+  .newsletterSubtitle {
+    font-size: 2rem;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+  
+  .newsletterText {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 40px;
+  }
+  
+  .newsletterForm {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .inputWrapper {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 9999px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .emailInput {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+  }
+  
+  .submitButton {
+    background: none;
+    border: none;
+    padding: 0 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .submitButton svg {
+    width: 20px;
+    height: 20px;
+    color: #333;
+  }
+  
+  .recaptcha {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    max-width: 300px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .recaptchaCheckbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .recaptchaLogo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 0.8rem;
+    color: #555;
+  }
+  
+  .recaptchaTerms {
+    font-size: 0.7rem;
+    color: #777;
+  }
+  
+  /* Enhanced Trending Section */
+  .trendingSection {
+    margin: 60px 0;
+  }
+  
+  .trendingSection > .trendingTitle {
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .trendingGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    margin: 0 20px;
+  }
+  
+  @media (min-width: 640px) {
+    .trendingGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .trendingGrid {
+      grid-template-columns: repeat(5, 1fr);
+      margin: 0;
+    }
+  }
+  
+  .trendingArticle {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .trendingImageContainer {
+    position: relative;
+    margin-bottom: 15px;
+    overflow: hidden;
+    aspect-ratio: 3/4;
+  }
+  
+  .trendingImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .trendingArticle:hover .trendingImage {
+    transform: scale(1.05);
+  }
+  
+  .playButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .playIcon {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 16px;
+    border-color: transparent transparent transparent #000;
+    margin-left: 4px;
+  }
+  
+  .trendingMeta {
+    margin-bottom: 8px;
+  }
+  
+  .trendingType {
+    font-size: 0.7rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .trendingArticle h4 {
+    font-size: 0.9rem;
+    font-weight: normal;
+    margin: 0;
+    line-height: 1.4;
+  }
+  
+  /* Community Section */
+  .communitySection {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .communityContent {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .communityContent h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin-bottom: 0;
+    letter-spacing: 0.5px;
+  }
+  
+  .communityContent h3 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+  
+  .communityContent p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 40px;
+  }
+  
+  .emailSignupContainer {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .emailSignup {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 9999px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .emailInput {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+  }
+  
+  .submitArrow {
+    background: none;
+    border: none;
+    padding: 0 20px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .recaptcha {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  } 

@@ -1,0 +1,376 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Times New Roman', serif;
+    color: #333;
+  }
+  
+  .publicationLabel {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #666;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    text-align: center;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .header h1 {
+    font-size: 3.8rem;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    text-transform: none;
+    margin: 0;
+  }
+  
+  .description {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .description p {
+    font-size: 0.95rem;
+    color: #444;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-family: 'Georgia', serif;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+  }
+  
+  .divider {
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 3rem 0;
+    width: 100%;
+  }
+  
+  /* Subscription Section */
+  .subscriptionSection {
+    display: flex;
+    gap: 4rem;
+    margin: 4rem 0;
+  }
+  
+  .subscriptionContent {
+    flex: 1;
+    padding-right: 2rem;
+  }
+  
+  .subscriptionTitle {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 0 0 1rem;
+    font-family: 'Times New Roman', serif;
+    letter-spacing: 0.3px;
+  }
+  
+  .subscriptionPrice {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+    font-family: 'Georgia', serif;
+    letter-spacing: 0.2px;
+  }
+  
+  .subscriptionDescription {
+    margin-bottom: 2rem;
+  }
+  
+  .subscriptionDescription p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #444;
+    font-family: 'Georgia', serif;
+    letter-spacing: 0.2px;
+    font-weight: 400;
+  }
+  
+  .subscriptionImage {
+    flex: 1;
+    background-color: #f0f0f0;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  .subscribeButton {
+    background-color: transparent;
+    border: 1px solid #333;
+    color: #333;
+    padding: 8px 25px;
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 400;
+    border-radius: 30px;
+    display: inline-block;
+  }
+  
+  .subscribeButton:hover {
+    background-color: #333;
+    color: white;
+  }
+  
+  /* Back Issues Section */
+  .backIssuesSection {
+    margin: 4rem 0;
+    padding: 0 2rem;
+  }
+  
+  .backIssuesHeader {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #666;
+    margin-bottom: 3rem;
+    font-weight: 400;
+    text-align: center;
+  }
+  
+  .issuesGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .issueItem {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .issueImage {
+    width: 100%;
+    aspect-ratio: 1/1.2;
+    background-color: #f0f0f0;
+    margin-bottom: 1.2rem;
+    overflow: hidden;
+  }
+  
+  .issueImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .issueTitle {
+    font-size: 0.95rem;
+    font-weight: 400;
+    margin: 0 0 0.3rem;
+    font-family: 'Times New Roman', serif;
+    color: #333;
+    letter-spacing: 0.2px;
+  }
+  
+  .orderNowButton {
+    background-color: transparent;
+    border: none;
+    color: #666;
+    padding: 0;
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 400;
+    text-decoration: none;
+  }
+  
+  .orderNowButton:hover {
+    color: #333;
+  }
+  
+  /* Help Section */
+  .helpSection {
+    margin: 6rem 0;
+  }
+  
+  .helpHeader {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #666;
+    margin-bottom: 3rem;
+    font-weight: 400;
+    text-align: center;
+  }
+  
+  .helpGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  .helpItem {
+    text-align: center;
+  }
+  
+  .helpLabel {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #666;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+  }
+  
+  .helpTitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0 0 1.5rem;
+    font-family: 'Times New Roman', serif;
+    letter-spacing: 0.3px;
+  }
+  
+  .helpButton {
+    background-color: transparent;
+    border: 1px solid #333;
+    color: #333;
+    padding: 8px 25px;
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 400;
+    border-radius: 30px;
+    display: inline-block;
+  }
+  
+  .helpButton:hover {
+    background-color: #333;
+    color: white;
+  }
+  
+  /* Partners Section */
+  .partnersSection {
+    max-width: 1200px;
+    margin: 6rem auto;
+    padding: 0 2rem;
+    text-align: center;
+  }
+  
+  .partnersHeader {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #666;
+    margin-bottom: 3rem;
+    font-weight: 400;
+    text-align: center;
+  }
+  
+  .principalPartnersGrid {
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+    margin-bottom: 6rem;
+  }
+  
+  .supportingPartnersGrid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .partnerLogo {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .partnerLogo:hover {
+    opacity: 0.8;
+  }
+  
+  .partnerLogo img {
+    max-height: 100%;
+    max-width: 150px;
+    object-fit: contain;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .issuesGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .subscriptionSection {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .subscriptionTitle {
+      font-size: 2.5rem;
+    }
+    
+    .issuesGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .helpGrid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    
+    .principalPartnersGrid,
+    .supportingPartnersGrid {
+      gap: 3rem;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .principalPartnersGrid {
+      margin-bottom: 4rem;
+    }
+  }
+  
+  /* Add these styles for the View More button */
+  .viewMoreContainer {
+    text-align: center;
+    margin-top: 4rem;
+  }
+  
+  .viewMoreButton {
+    background-color: transparent;
+    border: 1px solid #333;
+    color: #333;
+    padding: 8px 25px;
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 400;
+    border-radius: 30px;
+    display: inline-block;
+  }
+  
+  .viewMoreButton:hover {
+    background-color: #333;
+    color: white;
+  } 

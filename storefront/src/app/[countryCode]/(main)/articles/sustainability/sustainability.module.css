@@ -1,0 +1,892 @@
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  .pageTitle {
+    font-family: 'Times New Roman', serif;
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.5px;
+    margin: 2rem 0;
+  }
+  
+  .categoryNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  
+  .categoryLink {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: #333;
+    letter-spacing: 0.3px;
+  }
+  
+  .categoryLink:hover {
+    color: #000;
+  }
+  
+  .dotSeparator {
+    margin: 0 15px;
+    color: #666;
+  }
+  
+  .contentContainer {
+    display: flex;
+    gap: 60px;
+  }
+  
+  .sidebar {
+    width: 250px;
+    flex-shrink: 0;
+  }
+  
+  .mainContent {
+    flex-grow: 1;
+  }
+  
+  .filterSection {
+    margin-bottom: 40px;
+  }
+  
+  .filterTitle {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .filterList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .filterItem {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: #333;
+    font-family: 'Times New Roman', serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .filterItem:hover {
+    color: #000;
+  }
+  
+  .articlesGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+  }
+  
+  .articleCard {
+    margin-bottom: 30px;
+  }
+  
+  .articleCard a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .articleImage {
+    margin-bottom: 15px;
+  }
+  
+  .imagePlaceholder {
+    background-color: #f0f0f0;
+    width: 100%;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+    position: relative;
+  }
+  
+  .articleInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .articleCategory {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .articleTitle {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #000;
+    margin-top: 0.5rem;
+    line-height: 1.3;
+  }
+  
+  /* Featured Articles Section */
+  .featuredArticles {
+    margin-bottom: 4rem;
+  }
+  
+  .featuredArticle {
+    margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .featuredArticle:nth-child(even) {
+    grid-template-columns: 1fr 1fr;
+    direction: rtl;
+  }
+  
+  .featuredArticle:nth-child(even) .featuredContent {
+    direction: ltr;
+  }
+  
+  .featuredImage {
+    overflow: hidden;
+  }
+  
+  .featuredContent {
+    padding: 2rem 0;
+  }
+  
+  .featuredTitle {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+  
+  .featuredExcerpt {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+  
+  .readMore {
+    display: inline-block;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #000;
+    border-bottom: 1px solid #000;
+    padding-bottom: 2px;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+  
+  .readMore:hover {
+    opacity: 0.7;
+  }
+  
+  /* Load More Button */
+  .loadMore {
+    text-align: center;
+    margin: 3rem 0;
+  }
+  
+  .loadMoreButton {
+    padding: 0.75rem 2rem;
+    background: none;
+    border: 1px solid #000;
+    color: #000;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .loadMoreButton:hover {
+    background: #000;
+    color: #fff;
+  }
+  
+  /* Filters Container */
+  .filtersContainer {
+    margin: 4rem 0;
+    border: 1px solid #eaeaea;
+  }
+  
+  .filtersHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .filtersHeader h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0;
+  }
+  
+  .toggleFilters {
+    background: none;
+    border: none;
+    font-size: 0.9rem;
+    color: #666;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .filtersContent {
+    padding: 1.5rem;
+  }
+  
+  /* Newsletter Signup */
+  .newsletterSignup {
+    background-color: #f9f9f9;
+    padding: 3rem;
+    margin: 4rem 0;
+    text-align: center;
+  }
+  
+  .newsletterSignup h3 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+  }
+  
+  .newsletterSignup p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+  }
+  
+  .signupForm {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .signupForm input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    font-size: 0.9rem;
+  }
+  
+  .signupForm button {
+    padding: 0.75rem 1.5rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Trending Section */
+  .trendingSection {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eaeaea;
+  }
+  
+  .trendingSection h4 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .trendingSection ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .trendingSection li {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eaeaea;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .trendingSection a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .trendingSection a:hover {
+    color: #000;
+    text-decoration: underline;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1200px) {
+    .articlesGrid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .articlesGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .contentContainer {
+      flex-direction: column;
+    }
+    
+    .sidebar {
+      width: 100%;
+      order: 2;
+    }
+    
+    .mainContent {
+      order: 1;
+    }
+    
+    .articlesGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .articlesGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .pageTitle {
+      font-size: 2.5rem;
+    }
+  }
+  
+  .topLabel {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 400;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .divider {
+    height: 1px;
+    background-color: #eaeaea;
+    margin: 30px 0;
+    width: 100%;
+  }
+  
+  .dropdownArrow {
+    font-size: 0.5rem;
+    margin-left: 5px;
+    color: #666;
+  }
+  
+  /* Add these styles to the existing CSS file */
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+    gap: 1rem;
+  }
+  
+  .pageNumber, .pageLink {
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .pageNumber {
+    font-weight: bold;
+  }
+  
+  .ellipsis {
+    color: #333;
+  }
+  
+  .nextPage {
+    text-decoration: none;
+  }
+  
+  .nextArrow {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .dividerFull {
+    height: 1px;
+    background-color: #eaeaea;
+    margin: 3rem 0;
+    width: 100%;
+  }
+  
+  .newsletterSection {
+    text-align: center;
+    padding: 2rem 0 3rem;
+  }
+  
+  .newsletterTitle {
+    font-family: 'Times New Roman', serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+  }
+  
+  .newsletterSubtitle {
+    font-family: 'Times New Roman', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .newsletterText {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .newsletterForm {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    overflow: hidden;
+  }
+  
+  .emailInput {
+    flex: 1;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .submitButton {
+    background: none;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+  }
+  
+  .submitArrow {
+    font-size: 1.2rem;
+  }
+  
+  .recaptcha {
+    margin: 2rem auto;
+    max-width: 300px;
+  }
+  
+  .recaptchaPlaceholder {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid #eaeaea;
+    padding: 1rem;
+    border-radius: 3px;
+  }
+  
+  .trendingTitle {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 2rem 0;
+  }
+  
+  /* Update these styles to match the image exactly */
+  
+  .horizontalDivider {
+    height: 1px;
+    background-color: #e0e0e0;
+    width: 100%;
+    margin: 40px 0;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+    font-family: 'Times New Roman', serif;
+    font-size: 16px;
+  }
+  
+  .currentPage {
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .pageLink {
+    color: #666;
+    text-decoration: none;
+  }
+  
+  .ellipsis {
+    color: #666;
+  }
+  
+  .nextPageArrow {
+    color: #666;
+    text-decoration: none;
+  }
+  
+  .newsletterContainer {
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  .newsletterHeading {
+    font-family: 'Times New Roman', serif;
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+  }
+  
+  .communityHeading {
+    font-family: 'Times New Roman', serif;
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 0 0 30px 0;
+    letter-spacing: 0.5px;
+  }
+  
+  .newsletterDescription {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .emailFormContainer {
+    display: flex;
+    max-width: 550px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  
+  .emailField {
+    flex: 1;
+    border: none;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    outline: none;
+  }
+  
+  .submitArrow {
+    background: none;
+    border: none;
+    padding: 0 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .recaptchaContainer {
+    margin: 30px auto;
+    max-width: 220px;
+  }
+  
+  .recaptchaBox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 10px;
+  }
+  
+  .recaptchaCheckbox {
+    margin: 0;
+  }
+  
+  .recaptchaLabel {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.8rem;
+    color: #555;
+  }
+  
+  .trendingNowContainer {
+    text-align: center;
+    margin: 30px 0;
+  }
+  
+  .trendingNowHeading {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.8rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+  }
+  
+  /* Community Section styles */
+  .communitySection {
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  .communityContent {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .communityContent h2 {
+    font-family: 'Times New Roman', serif;
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin: 0;
+    line-height: 1.2;
+  }
+  
+  .communityContent h3 {
+    font-family: 'Times New Roman', serif;
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 0 0 30px 0;
+  }
+  
+  .communityContent p {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .emailSignupContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .emailSignup {
+    display: flex;
+    width: 100%;
+    max-width: 550px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  
+  .emailInput {
+    flex: 1;
+    border: none;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    outline: none;
+  }
+  
+  .recaptcha {
+    margin-top: 30px;
+  }
+  
+  /* Add these styles for the trending articles section */
+  
+  .trendingArticlesGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    margin: 40px 0;
+  }
+  
+  .trendingArticle {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .trendingArticle a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .trendingImage {
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  .trendingImagePlaceholder {
+    background-color: #f0f0f0;
+    width: 100%;
+    padding-top: 75%; /* 4:3 Aspect Ratio */
+    position: relative;
+  }
+  
+  .trendingCategory {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 10px 0 5px 0;
+  }
+  
+  .trendingTitle {
+    font-family: 'Times New Roman', serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000;
+    margin: 0;
+    line-height: 1.3;
+  }
+  
+  /* Media queries for responsive trending section */
+  @media (max-width: 1200px) {
+    .trendingArticlesGrid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .trendingArticlesGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .trendingArticlesGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .trendingArticlesGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Update the trending section styles */
+  .trendingNowSection {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .trendingNowHeading {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.8rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+    text-align: center;
+    margin: 30px 0;
+  }
+  
+  .trendingArticlesGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    margin: 40px 0;
+  }
+  
+  /* Add these styles for the play button overlay */
+  .trendingImage {
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  .trendingImagePlaceholder {
+    background-color: #f0f0f0;
+    width: 100%;
+    padding-top: 75%; /* 4:3 Aspect Ratio */
+    position: relative;
+  }
+  
+  .playButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .playArrow {
+    color: #333;
+    font-size: 18px;
+    margin-left: 3px; /* Slight adjustment for the triangle shape */
+  }
+  
+  /* Add these styles for the full-width community section */
+  .communityFullWidth {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .horizontalDividerFullWidth {
+    height: 1px;
+    background-color: #e0e0e0;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  /* Keep the existing community content styles */
+  .communityContent {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .communityContent h2 {
+    font-family: 'Times New Roman', serif;
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin: 0;
+    line-height: 1.2;
+  }
+  
+  .communityContent h3 {
+    font-family: 'Times New Roman', serif;
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 0 0 30px 0;
+  }
