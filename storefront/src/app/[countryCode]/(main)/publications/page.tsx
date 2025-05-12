@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './publication.module.css';
+import styles from './publications.module.css';
 
 export default function PublicationsPage() {
   return (
