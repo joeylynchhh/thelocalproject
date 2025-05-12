@@ -1126,7 +1126,12 @@ export default function ProfilesPage() {
   // Helper function to safely find a profile
   const findProfile = (name: string) => {
     const profile = profiles.find(p => p.name === name);
-    return profile ? <ProfileCard profile={profile} /> : null;
+    return profile ? <ProfileCard profile={{
+      name: profile.name,
+      category: profile.category,
+      image: profile.image,
+      slug: profile.slug
+    }} /> : null;
   };
   
   return (
