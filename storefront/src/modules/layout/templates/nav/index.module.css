@@ -1,0 +1,115 @@
+/* Announcement Bar */
+.announcementBar {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+  
+  /* Header */
+  .header {
+    padding: 20px 40px;
+    background-color: white;
+  }
+  
+  /* Top Bar */
+  .topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Left Section */
+  .leftSection {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .subscribeButton {
+    background-color: transparent;
+    border: 1px solid #1a1a1a;
+    padding: 8px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .searchButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Center Logo */
+  .centerLogo {
+    text-align: center;
+  }
+  
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo h1 {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: 1px;
+  }
+  
+  .logo h2 {
+    font-size: 36px;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: 2px;
+  }
+  
+  /* Right Section */
+  .rightSection {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .socialIcons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .cartButton {
+    background-color: transparent;
+    border: 1px solid #1a1a1a;
+    padding: 8px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  /* Main Navigation */
+  .mainNav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+  }
+  
+  .mainNav a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+  
+  .mainNav a:hover {
+    text-decoration: underline;
+  } 

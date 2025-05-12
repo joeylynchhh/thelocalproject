@@ -1,822 +1,448 @@
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 20px;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-  }
-  
-  .pageTitle {
-    font-family: 'Times New Roman', serif;
-    font-size: 3rem;
-    font-weight: 400;
-    text-align: center;
-    letter-spacing: 0.5px;
-    margin: 2rem 0;
-  }
-  
-  .categoryNav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 60px;
-  }
-  
-  .categoryLink {
-    font-family: 'Arial', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 400;
-    text-decoration: none;
-    color: #333;
-    letter-spacing: 0.3px;
-  }
-  
-  .categoryLink:hover {
-    color: #000;
-  }
-  
-  .dotSeparator {
-    margin: 0 15px;
-    color: #666;
-  }
-  
-  .contentContainer {
-    display: flex;
-    gap: 60px;
-  }
-  
-  .sidebar {
-    width: 250px;
-    flex-shrink: 0;
-  }
-  
-  .mainContent {
-    flex-grow: 1;
-  }
-  
-  .filterSection {
-    margin-bottom: 40px;
-  }
-  
-  .filterTitle {
-    font-size: 0.75rem;
-    font-weight: 400;
-    color: #666;
-    margin-bottom: 20px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .filterList {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .filterItem {
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-    cursor: pointer;
-    color: #333;
-    font-family: 'Times New Roman', serif;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .filterItem:hover {
-    color: #000;
-  }
-  
-  .articlesGrid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-  }
-  
-  .articleCard {
-    margin-bottom: 30px;
-  }
-  
-  .articleCard a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .articleImage {
-    margin-bottom: 15px;
-  }
-  
-  .imagePlaceholder {
-    background-color: #f0f0f0;
-    width: 100%;
-    padding-top: 100%; /* 1:1 Aspect Ratio */
-    position: relative;
-  }
-  
-  .articleInfo {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-  
-  .articleCategory {
-    font-family: 'Arial', sans-serif;
-    font-size: 0.75rem;
-    font-weight: 400;
-    color: #666;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 0.5rem;
-  }
-  
-  .articleTitle {
-    font-family: 'Times New Roman', serif;
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: #000;
-    margin-top: 0.5rem;
-    line-height: 1.3;
-  }
-  
-  /* Featured Articles Section */
-  .featuredArticles {
-    margin-bottom: 4rem;
-  }
-  
-  .featuredArticle {
-    margin-bottom: 3rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: center;
-  }
-  
-  .featuredArticle:nth-child(even) {
-    grid-template-columns: 1fr 1fr;
-    direction: rtl;
-  }
-  
-  .featuredArticle:nth-child(even) .featuredContent {
-    direction: ltr;
-  }
-  
-  .featuredImage {
-    overflow: hidden;
-  }
-  
-  .featuredContent {
-    padding: 2rem 0;
-  }
-  
-  .featuredTitle {
-    font-size: 1.8rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
-    line-height: 1.3;
-  }
-  
-  .featuredExcerpt {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #666;
-    margin-bottom: 1.5rem;
-  }
-  
-  .readMore {
-    display: inline-block;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #000;
-    border-bottom: 1px solid #000;
-    padding-bottom: 2px;
-    text-decoration: none;
-    transition: opacity 0.2s ease;
-  }
-  
-  .readMore:hover {
-    opacity: 0.7;
-  }
-  
-  /* Load More Button */
-  .loadMore {
-    text-align: center;
-    margin: 3rem 0;
-  }
-  
-  .loadMoreButton {
-    padding: 0.75rem 2rem;
-    background: none;
-    border: 1px solid #000;
-    color: #000;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-  
-  .loadMoreButton:hover {
-    background: #000;
-    color: #fff;
-  }
-  
-  /* Filters Container */
-  .filtersContainer {
-    margin: 4rem 0;
-    border: 1px solid #eaeaea;
-  }
-  
-  .filtersHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem;
-    border-bottom: 1px solid #eaeaea;
-  }
-  
-  .filtersHeader h3 {
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin: 0;
-  }
-  
-  .toggleFilters {
-    background: none;
-    border: none;
-    font-size: 0.9rem;
-    color: #666;
-    cursor: pointer;
-    text-decoration: underline;
-  }
-  
-  .filtersContent {
-    padding: 1.5rem;
-  }
-  
-  /* Newsletter Signup */
-  .newsletterSignup {
-    background-color: #f9f9f9;
-    padding: 3rem;
-    margin: 4rem 0;
-    text-align: center;
-  }
-  
-  .newsletterSignup h3 {
-    font-size: 1.8rem;
-    font-weight: 300;
-    margin-bottom: 1rem;
-    letter-spacing: 1px;
-  }
-  
-  .newsletterSignup p {
-    max-width: 600px;
-    margin: 0 auto 2rem;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #666;
-  }
-  
-  .signupForm {
-    display: flex;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  
-  .signupForm input {
-    flex: 1;
-    padding: 0.75rem 1rem;
-    border: 1px solid #ddd;
-    font-size: 0.9rem;
-  }
-  
-  .signupForm button {
-    padding: 0.75rem 1.5rem;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  
-  /* Trending Section */
-  .trendingSection {
-    margin-top: 4rem;
-    padding-top: 2rem;
-    border-top: 1px solid #eaeaea;
-  }
-  
-  .trendingSection h4 {
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin-bottom: 1.5rem;
-    letter-spacing: 0.5px;
-  }
-  
-  .trendingSection ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .trendingSection li {
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #eaeaea;
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-  
-  .trendingSection a {
-    color: #333;
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-  
-  .trendingSection a:hover {
-    color: #000;
-    text-decoration: underline;
-  }
-  
-  /* Media Queries */
-  @media (max-width: 1200px) {
-    .articlesGrid {
-      grid-template-columns: repeat(4, 1fr);
+'use client';
+
+import React, { useState } from 'react';
+import Link from 'next/link';
+import styles from './commercial.module.css';
+
+// Article type definition
+type Article = {
+  id: number;
+  title: string;
+  category: string;
+  image: string;
+  excerpt: string;
+  slug: string;
+  featured?: boolean;
+};
+
+export default function ArticlesPage() {
+  // Mock data based on the website content - expanded with additional projects
+  const articles: Article[] = [
+    {
+      id: 1,
+      title: "Hodgson House by BassamFellows",
+      category: "PROJECT FEATURE, BOOK EXTRACT",
+      image: "/images/hodgson-house.jpg",
+      excerpt: "Hodgson House by BassamFellows is stunningly featured in Art in Residence by Nicole England, an exploration into how art and personal collections infuse life into thoughtfully designed spaces.",
+      slug: "hodgson-house-bassamfellows",
+      featured: true
+    },
+    {
+      id: 2,
+      title: "Grove House by Cadence & Co",
+      category: "PROJECT FEATURE",
+      image: "/images/grove-house.jpg",
+      excerpt: "Grove House in Sydney demonstrates Cadence & Co's ability to balance seclusion with connection and heritage with modernity, creating a refined home that embraces contemporary family life.",
+      slug: "grove-house-cadence-co"
+    },
+    {
+      id: 3,
+      title: "10 St Ninians by Curatd",
+      category: "PROJECT FEATURE",
+      image: "/images/st-ninians.jpg",
+      excerpt: "In Melbourne's Brighton, 10 St Ninians pairs refined simplicity with bayside living, showcasing custom design details like curved joinery and Iver's Brunswick hardware to create a calm, cohesive atmosphere.",
+      slug: "10-st-ninians-curatd"
+    },
+    {
+      id: 4,
+      title: "Portsea Beach House by Studio Esteta",
+      category: "PROJECT FEATURE",
+      image: "/images/portsea-beach-house.jpg",
+      excerpt: "Portsea Beach House by Studio Esteta is a refined coastal retreat that balances sophistication with relaxed living, featuring natural materials and thoughtful spatial planning.",
+      slug: "portsea-beach-house-studio-esteta"
+    },
+    {
+      id: 5,
+      title: "Laminex's New Colour Collection",
+      category: "PRODUCT FEATURE",
+      image: "/images/laminex-colour.jpg",
+      excerpt: "Laminex introduces a refreshed colour palette that responds to evolving design trends while maintaining timeless appeal for contemporary Australian interiors.",
+      slug: "laminex-new-colour-collection"
+    },
+    // Additional projects - Row 2
+    {
+      id: 6,
+      title: "Coogee Cove by Kate Lawrence Interiors",
+      category: "PROJECT FEATURE",
+      image: "/images/coogee-cove.jpg",
+      excerpt: "Coogee Cove by Kate Lawrence Interiors showcases elegant coastal design with refined materials and thoughtful spatial planning.",
+      slug: "coogee-cove-kate-lawrence"
+    },
+    {
+      id: 7,
+      title: "DoubleTree by Hilton Hobart's Super-Durable Dekton Façade",
+      category: "PROJECT FEATURE",
+      image: "/images/doubletree-hilton.jpg",
+      excerpt: "The DoubleTree by Hilton Hobart features an innovative and durable Dekton façade that combines aesthetics with practical performance.",
+      slug: "doubletree-hilton-dekton-facade"
+    },
+    {
+      id: 8,
+      title: "Coastal Pavilion by Studio Jackson Scott",
+      category: "PROJECT FEATURE",
+      image: "/images/coastal-pavilion.jpg",
+      excerpt: "Coastal Pavilion by Studio Jackson Scott embraces its oceanfront setting with a thoughtful design that balances openness with privacy.",
+      slug: "coastal-pavilion-jackson-scott"
+    },
+    {
+      id: 9,
+      title: "Northcote Residence by Melanie Beynon Architecture",
+      category: "PROJECT FEATURE",
+      image: "/images/northcote-residence.jpg",
+      excerpt: "Northcote Residence by Melanie Beynon Architecture transforms a heritage home with contemporary interventions that respect its historical context.",
+      slug: "northcote-residence-beynon"
+    },
+    {
+      id: 10,
+      title: "Armadale Residence by Pleysier Perkins",
+      category: "PROJECT FEATURE",
+      image: "/images/armadale-residence.jpg",
+      excerpt: "Armadale Residence by Pleysier Perkins balances heritage details with modern living requirements in this thoughtful renovation.",
+      slug: "armadale-residence-pleysier-perkins"
+    },
+    // Additional projects - Row 3
+    {
+      id: 11,
+      title: "Bondi Beach House by Alexander &CO.",
+      category: "PROJECT FEATURE",
+      image: "/images/bondi-beach-house.jpg",
+      excerpt: "Bondi Beach House by Alexander &CO. celebrates coastal living with a refined palette and thoughtful spatial planning.",
+      slug: "bondi-beach-house-alexander-co"
+    },
+    {
+      id: 12,
+      title: "Woollahra Terrace by Porebski Architects",
+      category: "PROJECT FEATURE",
+      image: "/images/woollahra-terrace.jpg",
+      excerpt: "Woollahra Terrace by Porebski Architects reimagines a heritage terrace for contemporary living while preserving its historical character.",
+      slug: "woollahra-terrace-porebski"
+    },
+    {
+      id: 13,
+      title: "Hawthorn House by Edition Office",
+      category: "PROJECT FEATURE",
+      image: "/images/hawthorn-house.jpg",
+      excerpt: "Hawthorn House by Edition Office explores materiality and light in this thoughtfully designed Melbourne residence.",
+      slug: "hawthorn-house-edition-office"
+    },
+    {
+      id: 14,
+      title: "Palm Beach House by Richards Stanisich",
+      category: "PROJECT FEATURE",
+      image: "/images/palm-beach-house.jpg",
+      excerpt: "Palm Beach House by Richards Stanisich creates a serene coastal retreat with a sophisticated material palette and considered detailing.",
+      slug: "palm-beach-house-richards-stanisich"
+    },
+    {
+      id: 15,
+      title: "Toorak Residence by Hecker Guthrie",
+      category: "PROJECT FEATURE",
+      image: "/images/toorak-residence.jpg",
+      excerpt: "Toorak Residence by Hecker Guthrie exemplifies refined luxury with its thoughtful material selection and elegant proportions.",
+      slug: "toorak-residence-hecker-guthrie"
+    },
+    // Additional projects - Row 4
+    {
+      id: 16,
+      title: "Paddington Terrace by Smac Studio",
+      category: "PROJECT FEATURE",
+      image: "/images/paddington-terrace.jpg",
+      excerpt: "Paddington Terrace by Smac Studio transforms a narrow Sydney terrace into a light-filled contemporary home.",
+      slug: "paddington-terrace-smac"
+    },
+    {
+      id: 17,
+      title: "Bronte House by Tobias Partners",
+      category: "PROJECT FEATURE",
+      image: "/images/bronte-house.jpg",
+      excerpt: "Bronte House by Tobias Partners responds to its coastal context with a design that embraces views while providing privacy and shelter.",
+      slug: "bronte-house-tobias-partners"
+    },
+    {
+      id: 18,
+      title: "Malvern East by Flack Studio",
+      category: "PROJECT FEATURE",
+      image: "/images/malvern-east.jpg",
+      excerpt: "Malvern East by Flack Studio showcases bold material choices and thoughtful spatial planning in this Melbourne residence.",
+      slug: "malvern-east-flack-studio"
+    },
+    {
+      id: 19,
+      title: "Darling Point Apartment by Arent&Pyke",
+      category: "PROJECT FEATURE",
+      image: "/images/darling-point.jpg",
+      excerpt: "Darling Point Apartment by Arent&Pyke demonstrates how thoughtful interior design can transform a compact space into a sophisticated home.",
+      slug: "darling-point-arent-pyke"
+    },
+    {
+      id: 20,
+      title: "Mosman House by Mathieson Architects",
+      category: "PROJECT FEATURE",
+      image: "/images/mosman-house.jpg",
+      excerpt: "Mosman House by Mathieson Architects balances minimalist design with warmth through careful material selection and considered detailing.",
+      slug: "mosman-house-mathieson"
     }
-  }
-  
-  @media (max-width: 992px) {
-    .articlesGrid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .contentContainer {
-      flex-direction: column;
-    }
-    
-    .sidebar {
-      width: 100%;
-      order: 2;
-    }
-    
-    .mainContent {
-      order: 1;
-    }
-    
-    .articlesGrid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .articlesGrid {
-      grid-template-columns: 1fr;
-    }
-    
-    .pageTitle {
-      font-size: 2.5rem;
-    }
-  }
-  
-  .topLabel {
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-    font-size: 0.65rem;
-    font-weight: 400;
-    color: #777;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .divider {
-    height: 1px;
-    background-color: #eaeaea;
-    margin: 30px 0;
-    width: 100%;
-  }
-  
-  .dropdownArrow {
-    font-size: 0.5rem;
-    margin-left: 5px;
-    color: #666;
-  }
-  
-  /* Add these styles to the existing CSS file */
-  
-  .pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 3rem 0;
-    gap: 1rem;
-  }
-  
-  .pageNumber, .pageLink {
-    font-size: 1rem;
-    color: #333;
-    text-decoration: none;
-    padding: 0.25rem 0.5rem;
-  }
-  
-  .pageNumber {
-    font-weight: bold;
-  }
-  
-  .ellipsis {
-    color: #333;
-  }
-  
-  .nextPage {
-    text-decoration: none;
-  }
-  
-  .nextArrow {
-    font-size: 1.2rem;
-    color: #333;
-  }
-  
-  .dividerFull {
-    height: 1px;
-    background-color: #eaeaea;
-    margin: 3rem 0;
-    width: 100%;
-  }
-  
-  .newsletterSection {
-    text-align: center;
-    padding: 2rem 0 3rem;
-  }
-  
-  .newsletterTitle {
-    font-family: 'Times New Roman', serif;
-    font-size: 2.5rem;
-    font-weight: 400;
-    margin-bottom: 0.5rem;
-  }
-  
-  .newsletterSubtitle {
-    font-family: 'Times New Roman', serif;
-    font-size: 2rem;
-    font-weight: 400;
-    margin-top: 0;
-    margin-bottom: 2rem;
-  }
-  
-  .newsletterText {
-    max-width: 600px;
-    margin: 0 auto 2rem;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #333;
-  }
-  
-  .newsletterForm {
-    display: flex;
-    max-width: 600px;
-    margin: 0 auto;
-    border: 1px solid #ccc;
-    border-radius: 50px;
-    overflow: hidden;
-  }
-  
-  .emailInput {
-    flex: 1;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    font-size: 1rem;
-    outline: none;
-  }
-  
-  .submitButton {
-    background: none;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    cursor: pointer;
-  }
-  
-  .submitArrow {
-    font-size: 1.2rem;
-  }
-  
-  .recaptcha {
-    margin: 2rem auto;
-    max-width: 300px;
-  }
-  
-  .recaptchaPlaceholder {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    border: 1px solid #eaeaea;
-    padding: 1rem;
-    border-radius: 3px;
-  }
-  
-  .trendingTitle {
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 400;
-    color: #333;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 2rem 0;
-  }
-  
-  /* Update these styles to match the image exactly */
-  
-  .horizontalDivider {
-    height: 1px;
-    background-color: #e0e0e0;
-    width: 100%;
-    margin: 40px 0;
-  }
-  
-  .pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin: 20px 0;
-    font-family: 'Times New Roman', serif;
-    font-size: 16px;
-  }
-  
-  .currentPage {
-    font-weight: bold;
-    color: #000;
-  }
-  
-  .pageLink {
-    color: #666;
-    text-decoration: none;
-  }
-  
-  .ellipsis {
-    color: #666;
-  }
-  
-  .nextPageArrow {
-    color: #666;
-    text-decoration: none;
-  }
-  
-  .newsletterContainer {
-    text-align: center;
-    padding: 40px 0;
-  }
-  
-  .newsletterHeading {
-    font-family: 'Times New Roman', serif;
-    font-size: 2.5rem;
-    font-weight: normal;
-    margin: 0;
-    line-height: 1.2;
-    letter-spacing: 0.5px;
-  }
-  
-  .communityHeading {
-    font-family: 'Times New Roman', serif;
-    font-size: 2rem;
-    font-weight: normal;
-    margin: 0 0 30px 0;
-    letter-spacing: 0.5px;
-  }
-  
-  .newsletterDescription {
-    font-family: 'Arial', sans-serif;
-    font-size: 0.9rem;
-    color: #333;
-    line-height: 1.6;
-    margin-bottom: 30px;
-  }
-  
-  .emailFormContainer {
-    display: flex;
-    max-width: 550px;
-    margin: 0 auto;
-    border: 1px solid #ccc;
-    border-radius: 30px;
-    overflow: hidden;
-  }
-  
-  .emailField {
-    flex: 1;
-    border: none;
-    padding: 12px 20px;
-    font-size: 0.9rem;
-    outline: none;
-  }
-  
-  .submitArrow {
-    background: none;
-    border: none;
-    padding: 0 20px;
-    font-size: 1.2rem;
-    cursor: pointer;
-  }
-  
-  .recaptchaContainer {
-    margin: 30px auto;
-    max-width: 220px;
-  }
-  
-  .recaptchaBox {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    padding: 10px;
-  }
-  
-  .recaptchaCheckbox {
-    margin: 0;
-  }
-  
-  .recaptchaLabel {
-    font-family: 'Arial', sans-serif;
-    font-size: 0.8rem;
-    color: #555;
-  }
-  
-  .trendingNowContainer {
-    text-align: center;
-    margin: 30px 0;
-  }
-  
-  .trendingNowHeading {
-    font-family: 'Arial', sans-serif;
-    font-size: 0.8rem;
-    font-weight: normal;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #333;
-  }
-  
-  /* Community Section styles */
-  .communitySection {
-    text-align: center;
-    padding: 40px 0;
-  }
-  
-  .communityContent {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .communityContent h2 {
-    font-family: 'Times New Roman', serif;
-    font-size: 2.5rem;
-    font-weight: normal;
-    margin: 0;
-    line-height: 1.2;
-  }
-  
-  .communityContent h3 {
-    font-family: 'Times New Roman', serif;
-    font-size: 2rem;
-    font-weight: normal;
-    margin: 0 0 30px 0;
-  }
-  
-  .communityContent p {
-    font-family: 'Arial', sans-serif;
-    font-size: 0.9rem;
-    color: #333;
-    line-height: 1.6;
-    margin-bottom: 30px;
-  }
-  
-  .emailSignupContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .emailSignup {
-    display: flex;
-    width: 100%;
-    max-width: 550px;
-    border: 1px solid #ccc;
-    border-radius: 30px;
-    overflow: hidden;
-  }
-  
-  .emailInput {
-    flex: 1;
-    border: none;
-    padding: 12px 20px;
-    font-size: 0.9rem;
-    outline: none;
-  }
-  
-  .recaptcha {
-    margin-top: 30px;
-  }
-  
-  /* Add these styles for the trending articles section */
-  
-  .trendingArticlesGrid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-    margin: 40px 0;
-  }
-  
-  .trendingArticle {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .trendingArticle a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .trendingImage {
-    margin-bottom: 15px;
-    position: relative;
-  }
-  
-  .trendingImagePlaceholder {
-    background-color: #f0f0f0;
-    width: 100%;
-    padding-top: 75%; /* 4:3 Aspect Ratio */
-    position: relative;
-  }
-  
-  .trendingCategory {
-    font-family: 'Arial', sans-serif;
-    font-size: 0.7rem;
-    font-weight: 400;
-    color: #666;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin: 10px 0 5px 0;
-  }
-  
-  .trendingTitle {
-    font-family: 'Times New Roman', serif;
-    font-size: 1rem;
-    font-weight: 400;
-    color: #000;
-    margin: 0;
-    line-height: 1.3;
-  }
-  
-  /* Media queries for responsive trending section */
-  @media (max-width: 1200px) {
-    .trendingArticlesGrid {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
-  
-  @media (max-width: 992px) {
-    .trendingArticlesGrid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .trendingArticlesGrid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .trendingArticlesGrid {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  /* Update the trending section styles */
-  .trendingNowSection {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  .trendingNowHeading {
-    font-family: 'Arial', sans-serif;
-    font-size: 0.8rem;
-    font-weight: normal;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #333;
-    text-align: center;
-    margin: 30px 0;
-  }
-  
-  .trendingArticlesGrid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-    margin: 40px 0;
-  }
+  ];
+
+  // Featured articles
+  const featuredArticles = articles.filter(article => article.featured);
+  const regularArticles = articles.filter(article => !article.featured);
+
+  // Categories for the tabs
+  const categories = [
+    "Architecture and Interior Design",
+    "Product Design",
+    "News and Events",
+    "Project Galleries"
+  ];
+
+  // State for showing/hiding filters
+  const [showFilters, setShowFilters] = useState(false);
+
+  return (
+    <div className={styles.container}>
+      <div className={styles.topLabel}>ARTICLES</div>
+      <h1 className={styles.pageTitle}>COMMERCIAL DESIGN</h1>
+      
+      <div className={styles.categoryNav}>
+        {categories.map((category, index) => (
+          <React.Fragment key={`category-${category}`}>
+            <Link href="#" className={styles.categoryLink}>
+              {category}
+            </Link>
+            {index < categories.length - 1 && <span className={styles.dotSeparator}>•</span>}
+          </React.Fragment>
+        ))}
+      </div>
+      
+      <div className={styles.contentContainer}>
+        <div className={styles.sidebar}>
+          <div className={styles.filterSection}>
+            <h3 className={styles.filterTitle}>ARTICLE TYPE</h3>
+            <ul className={styles.filterList}>
+              <li className={styles.filterItem}>All Articles</li>
+              <li className={styles.filterItem}>Architecture and Interior Design</li>
+              <li className={styles.filterItem}>Product Design</li>
+              <li className={styles.filterItem}>News and Events</li>
+              <li className={styles.filterItem}>Project Galleries</li>
+              <li className={styles.filterItem}>
+                Print Publication Articles
+                <span className={styles.dropdownArrow}>▼</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div className={styles.divider} />
+          
+          <div className={styles.filterSection}>
+            <h3 className={styles.filterTitle}>TOPIC</h3>
+            <ul className={styles.filterList}>
+              <li className={styles.filterItem}>Residential Design</li>
+              <li className={styles.filterItem}>Furniture Designs</li>
+              <li className={styles.filterItem}>Product and Material Design</li>
+              <li className={styles.filterItem}>Profile Features</li>
+              <li className={styles.filterItem}>Garden and Landscape Design</li>
+              <li className={styles.filterItem}>Commercial Design</li>
+              <li className={styles.filterItem}>Hospitality Design</li>
+              <li className={styles.filterItem}>Art & Sculpture</li>
+            </ul>
+          </div>
+          
+          <div className={styles.divider} />
+          
+          <div className={styles.filterSection}>
+            <h3 className={styles.filterTitle}>LOCATION</h3>
+            <ul className={styles.filterList}>
+              <li className={styles.filterItem}>
+                Australia
+                <span className={styles.dropdownArrow}>▼</span>
+              </li>
+              <li className={styles.filterItem}>
+                New Zealand
+                <span className={styles.dropdownArrow}>▼</span>
+              </li>
+              <li className={styles.filterItem}>North America</li>
+            </ul>
+          </div>
+          
+          {/* Hidden but preserved original filters */}
+          <div style={{ display: 'none' }}>
+          </div>
+        </div>
+        
+        <div className={styles.mainContent}>
+          {/* Featured Articles Section - Hidden but preserved */}
+          <div className={styles.featuredArticles} style={{ display: 'none' }}>
+            {featuredArticles.map(article => (
+              <div key={`featured-${article.id}`} className={styles.featuredArticle}>
+                <div className={styles.featuredImage}>
+                  <div className={styles.imagePlaceholder} style={{backgroundColor: '#f0f0f0', height: '400px'}} />
+                </div>
+                <div className={styles.featuredContent}>
+                  <div className={styles.articleCategory}>{article.category}</div>
+                  <h2 className={styles.featuredTitle}>{article.title}</h2>
+                  <p className={styles.featuredExcerpt}>{article.excerpt}</p>
+                  <Link href={`/articles/${article.slug}`} className={styles.readMore}>
+                    Read More
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Articles Grid - Visible and styled like the image */}
+          <div className={styles.articlesGrid}>
+            {articles.map((article) => (
+              <div key={article.id} className={styles.articleCard}>
+                <Link href={`/articles/${article.slug}`}>
+                  <div className={styles.articleImage}>
+                    <div className={styles.imagePlaceholder} />
+                  </div>
+                  <div className={styles.articleInfo}>
+                    <div className={styles.articleCategory}>{article.category}</div>
+                    <h2 className={styles.articleTitle}>{article.title}</h2>
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          <div className={styles.horizontalDivider} />
+
+          {/* Community Section */}
+          <div className={styles.communitySection}>
+            <div className={styles.communityContent}>
+              <h2>THE LOCAL PROJECT</h2>
+              <h3>Community</h3>
+              <p>Sign up to our mailing list for the best of local architecture, interiors and design delivered to your inbox.</p>
+              
+              <div className={styles.emailSignupContainer}>
+                <div className={styles.emailSignup}>
+                  <input 
+                    type="email" 
+                    placeholder="Enter Your Email Here" 
+                    className={styles.emailInput}
+                  />
+                  <button type="submit" className={styles.submitArrow}>
+                    →
+                  </button>
+                </div>
+                
+                <div className={styles.recaptcha}>
+                  <div className="g-recaptcha" data-sitekey="your-recaptcha-site-key" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.horizontalDivider} />
+        </div>
+      </div>
+      
+      {/* Trending Now - Full Width */}
+      <div className={styles.trendingNowSection}>
+        <h3 className={styles.trendingNowHeading}>TRENDING NOW</h3>
+        
+        <div className={styles.trendingArticlesGrid}>
+          <div className={styles.trendingArticle}>
+            <Link href="/articles/seascape-patterson-associates">
+              <div className={styles.trendingImage}>
+                <div className={styles.trendingImagePlaceholder} />
+              </div>
+              <div className={styles.trendingCategory}>BOOK FEATURE</div>
+              <h4 className={styles.trendingTitle}>Seascape by Patterson Associates</h4>
+            </Link>
+          </div>
+
+          <div className={styles.trendingArticle}>
+            <Link href="/articles/waiheke-house-cheshire-architects">
+              <div className={styles.trendingImage}>
+                <div className={styles.trendingImagePlaceholder} />
+              </div>
+              <div className={styles.trendingCategory}>BOOK FEATURE • ISSUE 03 FEATURE • VIDEO FEATURE</div>
+              <h4 className={styles.trendingTitle}>A Process of Discovery – Waiheke House by Cheshire Architects</h4>
+            </Link>
+          </div>
+
+          <div className={styles.trendingArticle}>
+            <Link href="/articles/waimataruru-pac-studio">
+              <div className={styles.trendingImage}>
+                <div className={styles.trendingImagePlaceholder} />
+              </div>
+              <div className={styles.trendingCategory}>VIDEO FEATURE</div>
+              <h4 className={styles.trendingTitle}>A Respectful Balance – Waimataruru by Pac Studio and Kristina Pickford Design</h4>
+            </Link>
+          </div>
+
+          <div className={styles.trendingArticle}>
+            <Link href="/articles/palms-residence-olson-kundig">
+              <div className={styles.trendingImage}>
+                <div className={styles.trendingImagePlaceholder} />
+              </div>
+              <div className={styles.trendingCategory}>VIDEO FEATURE</div>
+              <h4 className={styles.trendingTitle}>Forming Deep Connections – Palms Residence by Olson Kundig</h4>
+            </Link>
+          </div>
+
+          <div className={styles.trendingArticle}>
+            <Link href="/articles/yukari-house-tanev-muir">
+              <div className={styles.trendingImage}>
+                <div className={styles.trendingImagePlaceholder} />
+              </div>
+              <div className={styles.trendingCategory}>VIDEO FEATURE</div>
+              <h4 className={styles.trendingTitle}>Yukari House by Tanev Muir Architects</h4>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Hidden but preserved original elements */}
+      <div style={{ display: 'none' }}>
+        {/* Load More Button */}
+        <div className={styles.loadMore}>
+          <button type="button" className={styles.loadMoreButton}>Load More</button>
+        </div>
+
+        {/* Filters Container */}
+        <div className={styles.filtersContainer}>
+          <div className={styles.filtersHeader}>
+            <h3>Filter Articles</h3>
+            <button 
+              type="button" 
+              className={styles.toggleFilters}
+              onClick={() => setShowFilters(!showFilters)}
+            >
+              {showFilters ? 'Hide Filters' : 'Show Filters'}
+            </button>
+          </div>
+          {showFilters && (
+            <div className={styles.filtersContent}>
+            </div>
+          )}
+        </div>
+
+        {/* Newsletter Signup */}
+        <div className={styles.newsletterSignup}>
+          <h3>THE LOCAL PROJECT Community</h3>
+          <p>Sign up to our mailing list for the best of local architecture, interiors and design delivered to your inbox.</p>
+          <div className={styles.signupForm}>
+            <input type="email" placeholder="Your email address" />
+            <button type="button">Subscribe</button>
+          </div>
+        </div>
+
+        {/* Trending Section */}
+        <div className={styles.trendingSection}>
+          <h4>Trending now</h4>
+          <ul>
+            <li><Link href="/articles/seascape-patterson-associates">Book Feature Seascape by Patterson Associates</Link></li>
+            <li><Link href="/articles/waiheke-house-cheshire-architects">Book Feature • Issue 03 Feature • Video Feature A Process of Discovery – Waiheke House by Cheshire Architects</Link></li>
+            <li><Link href="/articles/waimataruru-pac-studio">Video Feature A Respectful Balance – Waimataruru by Pac Studio and Kristina Pickford Design</Link></li>
+            <li><Link href="/articles/palms-residence-olson-kundig">Video Feature Forming Deep Connections – Palms Residence by Olson Kundig</Link></li>
+            <li><Link href="/articles/yukari-house-tanev-muir">Video Feature Yukari House by Tanev Muir Architects</Link></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+} 

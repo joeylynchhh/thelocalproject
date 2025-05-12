@@ -3,8 +3,8 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import styles from './articles.module.css';
-import ArticleCard from '../../components/articles/ArticleCard';
-import ArticleFilters from '../../components/articles/ArticleFilters';
+import ArticleCard from '../../../../modules/articles/components/ArticleCard';
+import ArticleFilters from '../../../../modules/articles/components/ArticleFilters';
 
 // Article type definition
 type Article = {
