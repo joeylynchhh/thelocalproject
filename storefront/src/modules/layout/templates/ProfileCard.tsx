@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from '@/styles/ProfileCard.module.css';
+import styles from './ProfileCard.module.css';
 
 interface ProfileProps {
   profile: {
