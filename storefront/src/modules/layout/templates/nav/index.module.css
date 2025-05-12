@@ -52,6 +52,7 @@
   /* Center Logo */
   .centerLogo {
     text-align: center;
+    margin: 0 auto;
   }
   
   .logo {
@@ -60,13 +61,19 @@
     align-items: center;
     text-decoration: none;
     color: #1a1a1a;
+    line-height: 1.2;
+  }
+  
+  .logo div {
+    font-size: 18px;
+    margin-bottom: 0;
   }
   
   .logo h1 {
     font-size: 24px;
     font-weight: 400;
-    margin: 0;
-    letter-spacing: 1px;
+    margin-top: 0;
+    letter-spacing: 0.05em;
   }
   
   .logo h2 {
