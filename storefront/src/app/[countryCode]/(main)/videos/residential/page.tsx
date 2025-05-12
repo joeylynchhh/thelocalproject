@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './residential.module.css';
-import TrendingNow from '../../../components/shared/TrendingNow';
+import TrendingNow from '../../../../../modules/layout/templates/TrendingNow';
 
 export default function VideosPage() {
   // Sample trending articles data for the TrendingNow component

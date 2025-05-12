@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './architecture.module.css';
-import ProfileCard from '@/components/shared/ProfileCard';
+import ProfileCard from '../../../../../modules/layout/templates/ProfileCard';
 import Link from 'next/link';
 
 // Sample profile data - in a real app, this would come from an API or database
