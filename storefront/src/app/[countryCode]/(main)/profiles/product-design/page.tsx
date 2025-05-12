@@ -1586,7 +1586,7 @@ export default function ProfilesPage() {
                 className={styles.trendingImage} 
               />
               <div className={styles.playButton}>
-                <div className={styles.playIcon}></div>
+                <div className={styles.playIcon} />
               </div>
             </div>
             <div className={styles.trendingMeta}>
@@ -1604,7 +1604,7 @@ export default function ProfilesPage() {
                 className={styles.trendingImage} 
               />
               <div className={styles.playButton}>
-                <div className={styles.playIcon}></div>
+                <div className={styles.playIcon} />
               </div>
             </div>
             <div className={styles.trendingMeta}>
@@ -1622,7 +1622,7 @@ export default function ProfilesPage() {
                 className={styles.trendingImage} 
               />
               <div className={styles.playButton}>
-                <div className={styles.playIcon}></div>
+                <div className={styles.playIcon} />
               </div>
             </div>
             <div className={styles.trendingMeta}>
@@ -1640,7 +1640,7 @@ export default function ProfilesPage() {
                 className={styles.trendingImage} 
               />
               <div className={styles.playButton}>
-                <div className={styles.playIcon}></div>
+                <div className={styles.playIcon} />
               </div>
             </div>
             <div className={styles.trendingMeta}>
@@ -1658,7 +1658,7 @@ export default function ProfilesPage() {
                 className={styles.trendingImage} 
               />
               <div className={styles.playButton}>
-                <div className={styles.playIcon}></div>
+                <div className={styles.playIcon} />
               </div>
             </div>
             <div className={styles.trendingMeta}>

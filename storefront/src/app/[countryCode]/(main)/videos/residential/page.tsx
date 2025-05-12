@@ -499,7 +499,7 @@ export default function VideosPage() {
         </div>
       </div>
 
-      <div className={styles.divider}></div>
+      <div className={styles.divider} />
       
       {/* Replace the existing Trending Now section with the component */}
       <TrendingNow articles={trendingArticles} />

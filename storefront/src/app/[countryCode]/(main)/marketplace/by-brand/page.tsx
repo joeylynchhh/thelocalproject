@@ -1149,7 +1149,7 @@ export default function ProfilesPage() {
               <Link href={`#${letter}`} className={styles.letterLink}>
                 {letter}
               </Link>
-              {index < alphabet.length - 1 && <span className={styles.letterSpace}></span>}
+              {index < alphabet.length - 1 && <span className={styles.letterSpace} />}
             </React.Fragment>
           ))}
         </div>

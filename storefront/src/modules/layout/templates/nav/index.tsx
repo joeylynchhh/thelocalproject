@@ -179,7 +179,7 @@ export default function Header() {
           >
             <ul className={styles.submenuList}>
               {subMenus[activeMenu].map((item, index) => (
-                <li key={index}>
+                <li key={`${activeMenu}-${item.label}`}>
                   <Link href={item.href} className={styles.submenuLink}>
                     {item.label}
                   </Link>
