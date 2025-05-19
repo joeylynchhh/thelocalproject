@@ -109,6 +109,7 @@
   /* Main Navigation */
   .nav {
     width: 100%;
+    position: relative;
   }
   
   .navList {
@@ -132,15 +133,21 @@
     text-decoration: underline;
   }
   
+  .activeNavItem {
+    position: relative;
+  }
+  
   /* Submenu */
   .submenu {
     position: absolute;
     left: 0;
+    top: 100%;
     width: 100%;
     background-color: white;
     border-bottom: 1px solid #eaeaea;
     z-index: 10;
     padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   }
   
   .submenuList {
