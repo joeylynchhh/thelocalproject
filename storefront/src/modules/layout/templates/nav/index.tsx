@@ -165,26 +165,26 @@ export default function Header() {
             </li>
           </ul>
         </nav>
+        
+        {/* Moved submenu back inside header for correct positioning */}
+        {activeMenu && subMenus[activeMenu] && (
+          <div 
+            className={styles.submenu}
+            onMouseEnter={() => setActiveMenu(activeMenu)}
+            onMouseLeave={() => setActiveMenu(null)}
+          >
+            <ul className={styles.submenuList}>
+              {subMenus[activeMenu].map((item, index) => (
+                <li key={`${activeMenu}-${item.label}`}>
+                  <Link href={item.href} className={styles.submenuLink}>
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </header>
-      
-      {/* Moved submenu outside of header to correctly position it */}
-      {activeMenu && subMenus[activeMenu] && (
-        <div 
-          className={styles.submenu}
-          onMouseEnter={() => setActiveMenu(activeMenu)}
-          onMouseLeave={() => setActiveMenu(null)}
-        >
-          <ul className={styles.submenuList}>
-            {subMenus[activeMenu].map((item, index) => (
-              <li key={`${activeMenu}-${item.label}`}>
-                <Link href={item.href} className={styles.submenuLink}>
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
     </>
   );
 } 
