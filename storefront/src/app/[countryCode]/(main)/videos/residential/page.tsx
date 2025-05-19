@@ -51,7 +51,7 @@ export default function VideosPage() {
       {/* Page Header */}
       <div className={styles['page-header']}>
         <span className={styles.pageCategory}>VIDEOS</span>
-        <h1>RESIDENTIAL PROJECTS</h1>
+        <h1>RESIDENTIAL</h1>
         
         {/* Video Categories */}
         <div className={styles['video-categories']}>

@@ -798,37 +798,48 @@ export default function ProfilesPage() {
           </div>
           
           {/* A Design Studio */}
-          <ProfileCard profile={profiles.find(p => p.name === 'A Design Studio')} />
+          {profiles.find(p => p.name === 'A Design Studio') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'A Design Studio')!} />}
           
           {/* Abode */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Abode')} />
+          {profiles.find(p => p.name === 'Abode') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Abode')!} />}
           
           {/* Abodo */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Abodo')} />
+          {profiles.find(p => p.name === 'Abodo') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Abodo')!} />}
           
           {/* Acoufelt */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Acoufelt')} />
+          {profiles.find(p => p.name === 'Acoufelt') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Acoufelt')!} />}
           
           {/* Adam Kane Architects */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Adam Kane Architects')} />
+          {profiles.find(p => p.name === 'Adam Kane Architects') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Adam Kane Architects')!} />}
           
           {/* Agius Scorpo Architects */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Agius Scorpo Architects')} />
+          {profiles.find(p => p.name === 'Agius Scorpo Architects') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Agius Scorpo Architects')!} />}
           
           {/* AKI Design Studio */}
-          <ProfileCard profile={profiles.find(p => p.name === 'AKI Design Studio')} />
+          {profiles.find(p => p.name === 'AKI Design Studio') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'AKI Design Studio')!} />}
           
           {/* Alana Cooke */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Alana Cooke, Architecture, Interior Design.')} />
+          {profiles.find(p => p.name === 'Alana Cooke, Architecture, Interior Design.') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Alana Cooke, Architecture, Interior Design.')!} />}
           
           {/* Alex Earl */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Alex Earl')} />
+          {profiles.find(p => p.name === 'Alex Earl') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Alex Earl')!} />}
           
           {/* Alexander &CO. */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Alexander &CO.')} />
+          {profiles.find(p => p.name === 'Alexander &CO.') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Alexander &CO.')!} />}
           
           {/* Alexandra Buchanan Architecture */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Alexandra Buchanan Architecture')} />
+          {profiles.find(p => p.name === 'Alexandra Buchanan Architecture') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Alexandra Buchanan Architecture')!} />}
           
           {/* Letter B immediately after the last A profile */}
           <div className={styles.letterCard} id="B">
@@ -836,27 +847,38 @@ export default function ProfilesPage() {
           </div>
           
           {/* Austin Maynard Architects */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Austin Maynard Architects')} />
+          {profiles.find(p => p.name === 'Austin Maynard Architects') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Austin Maynard Architects')!} />}
           
           {/* B.E Architecture */}
-          <ProfileCard profile={profiles.find(p => p.name === 'B.E Architecture')} />
+          {profiles.find(p => p.name === 'B.E Architecture') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'B.E Architecture')!} />}
           
           {/* BAINA */}
-          <ProfileCard profile={profiles.find(p => p.name === 'BAINA')} />
+          {profiles.find(p => p.name === 'BAINA') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'BAINA')!} />}
           
           {/* Bang & Olufsen */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Bang & Olufsen')} />
+          {profiles.find(p => p.name === 'Bang & Olufsen') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Bang & Olufsen')!} />}
           
           {/* Baracco + Wright Architects */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Baracco + Wright Architects')} />
+          {profiles.find(p => p.name === 'Baracco + Wright Architects') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Baracco + Wright Architects')!} />}
           
           {/* Rest of B profiles */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Basil Bangs')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Baya')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Bayley Ward')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'BC Stone')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Ben Callery Architects')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Benn + Penna Architecture')} />
+          {profiles.find(p => p.name === 'Basil Bangs') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Basil Bangs')!} />}
+          {profiles.find(p => p.name === 'Baya') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Baya')!} />}
+          {profiles.find(p => p.name === 'Bayley Ward') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Bayley Ward')!} />}
+          {profiles.find(p => p.name === 'BC Stone') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'BC Stone')!} />}
+          {profiles.find(p => p.name === 'Ben Callery Architects') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Ben Callery Architects')!} />}
+          {profiles.find(p => p.name === 'Benn + Penna Architecture') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Benn + Penna Architecture')!} />}
           
           {/* Letter C immediately after the last B profile */}
           <div className={styles.letterCard} id="C">
@@ -864,11 +886,16 @@ export default function ProfilesPage() {
           </div>
           
           {/* C profiles */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Cantilever Interiors')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Carole Whiting')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Carr')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Carter Williamson Architects')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Chamberlain Architects')} />
+          {profiles.find(p => p.name === 'Cantilever Interiors') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Cantilever Interiors')!} />}
+          {profiles.find(p => p.name === 'Carole Whiting') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Carole Whiting')!} />}
+          {profiles.find(p => p.name === 'Carr') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Carr')!} />}
+          {profiles.find(p => p.name === 'Carter Williamson Architects') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Carter Williamson Architects')!} />}
+          {profiles.find(p => p.name === 'Chamberlain Architects') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Chamberlain Architects')!} />}
           
           {/* Letter D immediately after the last C profile */}
           <div className={styles.letterCard} id="D">
@@ -876,13 +903,20 @@ export default function ProfilesPage() {
           </div>
           
           {/* D profiles */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Davidov Architects')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Decus Interiors')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Doherty Design Studio')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Dangar Barin Smith')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'David Boyle Architect')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Derlot')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Design by Them')} />
+          {profiles.find(p => p.name === 'Davidov Architects') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Davidov Architects')!} />}
+          {profiles.find(p => p.name === 'Decus Interiors') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Decus Interiors')!} />}
+          {profiles.find(p => p.name === 'Doherty Design Studio') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Doherty Design Studio')!} />}
+          {profiles.find(p => p.name === 'Dangar Barin Smith') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Dangar Barin Smith')!} />}
+          {profiles.find(p => p.name === 'David Boyle Architect') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'David Boyle Architect')!} />}
+          {profiles.find(p => p.name === 'Derlot') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Derlot')!} />}
+          {profiles.find(p => p.name === 'Design by Them') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Design by Them')!} />}
           
           {/* Letter E immediately after the last D profile */}
           <div className={styles.letterCard} id="E">
@@ -890,11 +924,16 @@ export default function ProfilesPage() {
           </div>
           
           {/* E profiles */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Edition Office')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Elenberg Fraser')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Eastop Architects')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Eckersley Garden Architecture')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Edra')} />
+          {profiles.find(p => p.name === 'Edition Office') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Edition Office')!} />}
+          {profiles.find(p => p.name === 'Elenberg Fraser') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Elenberg Fraser')!} />}
+          {profiles.find(p => p.name === 'Eastop Architects') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Eastop Architects')!} />}
+          {profiles.find(p => p.name === 'Eckersley Garden Architecture') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Eckersley Garden Architecture')!} />}
+          {profiles.find(p => p.name === 'Edra') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Edra')!} />}
           
           {/* Letter F immediately after the last E profile */}
           <div className={styles.letterCard} id="F">
@@ -902,13 +941,20 @@ export default function ProfilesPage() {
           </div>
           
           {/* F profiles */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Fiona Lynch')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Flack Studio')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Folk Architects')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Figr Architecture Studio')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Foolscap Studio')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Foomann Architects')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Freadman White')} />
+          {profiles.find(p => p.name === 'Fiona Lynch') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Fiona Lynch')!} />}
+          {profiles.find(p => p.name === 'Flack Studio') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Flack Studio')!} />}
+          {profiles.find(p => p.name === 'Folk Architects') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Folk Architects')!} />}
+          {profiles.find(p => p.name === 'Figr Architecture Studio') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Figr Architecture Studio')!} />}
+          {profiles.find(p => p.name === 'Foolscap Studio') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Foolscap Studio')!} />}
+          {profiles.find(p => p.name === 'Foomann Architects') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Foomann Architects')!} />}
+          {profiles.find(p => p.name === 'Freadman White') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Freadman White')!} />}
           
           {/* Letter G immediately after the last F profile */}
           <div className={styles.letterCard} id="G">
@@ -916,12 +962,18 @@ export default function ProfilesPage() {
           </div>
           
           {/* G profiles */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Grazia & Co')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Golden')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Gardiner Architects')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Glas')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Grant Amon Architects')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Grimshaw')} />
+          {profiles.find(p => p.name === 'Grazia & Co') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Grazia & Co')!} />}
+          {profiles.find(p => p.name === 'Golden') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Golden')!} />}
+          {profiles.find(p => p.name === 'Gardiner Architects') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Gardiner Architects')!} />}
+          {profiles.find(p => p.name === 'Glas') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Glas')!} />}
+          {profiles.find(p => p.name === 'Grant Amon Architects') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Grant Amon Architects')!} />}
+          {profiles.find(p => p.name === 'Grimshaw') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Grimshaw')!} />}
           
           {/* Letter H immediately after the last G profile */}
           <div className={styles.letterCard} id="H">
@@ -929,11 +981,16 @@ export default function ProfilesPage() {
           </div>
           
           {/* H profiles */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Hassell')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Hecker Guthrie')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Handelsmann + Khaw')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Hayball')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Heartly')} />
+          {profiles.find(p => p.name === 'Hassell') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Hassell')!} />}
+          {profiles.find(p => p.name === 'Hecker Guthrie') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Hecker Guthrie')!} />}
+          {profiles.find(p => p.name === 'Handelsmann + Khaw') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Handelsmann + Khaw')!} />}
+          {profiles.find(p => p.name === 'Hayball') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Hayball')!} />}
+          {profiles.find(p => p.name === 'Heartly') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Heartly')!} />}
           
           {/* Letter I immediately after the last H profile */}
           <div className={styles.letterCard} id="I">
@@ -941,10 +998,14 @@ export default function ProfilesPage() {
           </div>
           
           {/* I profiles */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Inglis Architects')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'InForm')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Infinite Design Studio')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Intermode')} />
+          {profiles.find(p => p.name === 'Inglis Architects') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Inglis Architects')!} />}
+          {profiles.find(p => p.name === 'InForm') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'InForm')!} />}
+          {profiles.find(p => p.name === 'Infinite Design Studio') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Infinite Design Studio')!} />}
+          {profiles.find(p => p.name === 'Intermode') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Intermode')!} />}
           
           {/* Letter J immediately after the last I profile */}
           <div className={styles.letterCard} id="J">
@@ -952,11 +1013,16 @@ export default function ProfilesPage() {
           </div>
           
           {/* J profiles */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Jackson Clements Burrows')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Jardan')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'John Wardle Architects')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Jolson')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Juliette Arent Squadrito')} />
+          {profiles.find(p => p.name === 'Jackson Clements Burrows') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Jackson Clements Burrows')!} />}
+          {profiles.find(p => p.name === 'Jardan') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Jardan')!} />}
+          {profiles.find(p => p.name === 'John Wardle Architects') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'John Wardle Architects')!} />}
+          {profiles.find(p => p.name === 'Jolson') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Jolson')!} />}
+          {profiles.find(p => p.name === 'Juliette Arent Squadrito') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Juliette Arent Squadrito')!} />}
           
           {/* Letter K immediately after the last J profile */}
           <div className={styles.letterCard} id="K">
@@ -964,11 +1030,16 @@ export default function ProfilesPage() {
           </div>
           
           {/* K profiles */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Kennedy Nolan')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Koskela')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Koichi Takada Architects')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Kosloff Architecture')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Krause Architects')} />
+          {profiles.find(p => p.name === 'Kennedy Nolan') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Kennedy Nolan')!} />}
+          {profiles.find(p => p.name === 'Koskela') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Koskela')!} />}
+          {profiles.find(p => p.name === 'Koichi Takada Architects') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Koichi Takada Architects')!} />}
+          {profiles.find(p => p.name === 'Kosloff Architecture') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Kosloff Architecture')!} />}
+          {profiles.find(p => p.name === 'Krause Architects') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Krause Architects')!} />}
           
           {/* Letter L immediately after the last K profile */}
           <div className={styles.letterCard} id="L">
@@ -976,11 +1047,16 @@ export default function ProfilesPage() {
           </div>
           
           {/* L profiles */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Laminex')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Lyn Gardener')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Luchetti Krelle')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Luigi Rosselli Architects')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Lume Architecture')} />
+          {profiles.find(p => p.name === 'Laminex') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Laminex')!} />}
+          {profiles.find(p => p.name === 'Lyn Gardener') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Lyn Gardener')!} />}
+          {profiles.find(p => p.name === 'Luchetti Krelle') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Luchetti Krelle')!} />}
+          {profiles.find(p => p.name === 'Luigi Rosselli Architects') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Luigi Rosselli Architects')!} />}
+          {profiles.find(p => p.name === 'Lume Architecture') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Lume Architecture')!} />}
           
           {/* Letter M immediately after the last L profile */}
           <div className={styles.letterCard} id="M">
@@ -988,11 +1064,16 @@ export default function ProfilesPage() {
           </div>
           
           {/* M profiles */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Mim Design')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Molecule Studio')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Madeleine Blanchfield Architects')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Maker & Son')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Marston Architects')} />
+          {profiles.find(p => p.name === 'Mim Design') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Mim Design')!} />}
+          {profiles.find(p => p.name === 'Molecule Studio') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Molecule Studio')!} />}
+          {profiles.find(p => p.name === 'Madeleine Blanchfield Architects') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Madeleine Blanchfield Architects')!} />}
+          {profiles.find(p => p.name === 'Maker & Son') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Maker & Son')!} />}
+          {profiles.find(p => p.name === 'Marston Architects') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Marston Architects')!} />}
           
           {/* Letter N immediately after the last M profile */}
           <div className={styles.letterCard} id="N">
@@ -1000,11 +1081,16 @@ export default function ProfilesPage() {
           </div>
           
           {/* N profiles */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Neometro')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Nexus Designs')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Nightingale Housing')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Norm Architects')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Northbourne Architecture + Design')} />
+          {profiles.find(p => p.name === 'Neometro') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Neometro')!} />}
+          {profiles.find(p => p.name === 'Nexus Designs') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Nexus Designs')!} />}
+          {profiles.find(p => p.name === 'Nightingale Housing') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Nightingale Housing')!} />}
+          {profiles.find(p => p.name === 'Norm Architects') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Norm Architects')!} />}
+          {profiles.find(p => p.name === 'Northbourne Architecture + Design') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Northbourne Architecture + Design')!} />}
           
           {/* Letter O immediately after the last N profile */}
           <div className={styles.letterCard} id="O">
@@ -1012,12 +1098,18 @@ export default function ProfilesPage() {
           </div>
           
           {/* O profiles */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Olaver Architecture')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Otomys')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Other Architects')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Owen Architecture')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Ownworld')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Oblica')} />
+          {profiles.find(p => p.name === 'Olaver Architecture') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Olaver Architecture')!} />}
+          {profiles.find(p => p.name === 'Otomys') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Otomys')!} />}
+          {profiles.find(p => p.name === 'Other Architects') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Other Architects')!} />}
+          {profiles.find(p => p.name === 'Owen Architecture') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Owen Architecture')!} />}
+          {profiles.find(p => p.name === 'Ownworld') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Ownworld')!} />}
+          {profiles.find(p => p.name === 'Oblica') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Oblica')!} />}
           
           {/* Letter P immediately after the last O profile */}
           <div className={styles.letterCard} id="P">
@@ -1025,11 +1117,16 @@ export default function ProfilesPage() {
           </div>
           
           {/* P profiles */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Poliform')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Porters Paints')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Pandolfini Architects')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Pattern Studio')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Penfold Projects')} />
+          {profiles.find(p => p.name === 'Poliform') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Poliform')!} />}
+          {profiles.find(p => p.name === 'Porters Paints') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Porters Paints')!} />}
+          {profiles.find(p => p.name === 'Pandolfini Architects') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Pandolfini Architects')!} />}
+          {profiles.find(p => p.name === 'Pattern Studio') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Pattern Studio')!} />}
+          {profiles.find(p => p.name === 'Penfold Projects') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Penfold Projects')!} />}
           
           {/* Letter Q immediately after the last P profile */}
           <div className={styles.letterCard} id="Q">
@@ -1037,11 +1134,16 @@ export default function ProfilesPage() {
           </div>
           
           {/* Q profiles */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Quantum Timber Finishes')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Quince & Cook')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Quinn Architecture')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Quirk Architecture')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Quay Furniture')} />
+          {profiles.find(p => p.name === 'Quantum Timber Finishes') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Quantum Timber Finishes')!} />}
+          {profiles.find(p => p.name === 'Quince & Cook') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Quince & Cook')!} />}
+          {profiles.find(p => p.name === 'Quinn Architecture') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Quinn Architecture')!} />}
+          {profiles.find(p => p.name === 'Quirk Architecture') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Quirk Architecture')!} />}
+          {profiles.find(p => p.name === 'Quay Furniture') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Quay Furniture')!} />}
           
           {/* Letter R immediately after the last Q profile */}
           <div className={styles.letterCard} id="R">
@@ -1049,11 +1151,16 @@ export default function ProfilesPage() {
           </div>
           
           {/* R profiles */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Richards Stanisich')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Rob Mills Architecture & Interiors')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Robson Rak')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Rogerseller')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Rolf Benz')} />
+          {profiles.find(p => p.name === 'Richards Stanisich') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Richards Stanisich')!} />}
+          {profiles.find(p => p.name === 'Rob Mills Architecture & Interiors') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Rob Mills Architecture & Interiors')!} />}
+          {profiles.find(p => p.name === 'Robson Rak') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Robson Rak')!} />}
+          {profiles.find(p => p.name === 'Rogerseller') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Rogerseller')!} />}
+          {profiles.find(p => p.name === 'Rolf Benz') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Rolf Benz')!} />}
           
           {/* Letter S immediately after the last R profile */}
           <div className={styles.letterCard} id="S">
@@ -1061,11 +1168,16 @@ export default function ProfilesPage() {
           </div>
           
           {/* S profiles */}
-          <ProfileCard profile={profiles.find(p => p.name === 'SJB')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Studio Bright')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Smart Design Studio')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Spence & Lyda')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Studio Esteta')} />
+          {profiles.find(p => p.name === 'SJB') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'SJB')!} />}
+          {profiles.find(p => p.name === 'Studio Bright') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Studio Bright')!} />}
+          {profiles.find(p => p.name === 'Smart Design Studio') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Smart Design Studio')!} />}
+          {profiles.find(p => p.name === 'Spence & Lyda') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Spence & Lyda')!} />}
+          {profiles.find(p => p.name === 'Studio Esteta') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Studio Esteta')!} />}
           
           {/* Letter T immediately after the last S profile */}
           <div className={styles.letterCard} id="T">
@@ -1073,11 +1185,16 @@ export default function ProfilesPage() {
           </div>
           
           {/* T profiles */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Tait')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Techne Architecture + Interior Design')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Templeton Architecture')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Thonet')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Tom Fereday')} />
+          {profiles.find(p => p.name === 'Tait') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Tait')!} />}
+          {profiles.find(p => p.name === 'Techne Architecture + Interior Design') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Techne Architecture + Interior Design')!} />}
+          {profiles.find(p => p.name === 'Templeton Architecture') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Templeton Architecture')!} />}
+          {profiles.find(p => p.name === 'Thonet') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Thonet')!} />}
+          {profiles.find(p => p.name === 'Tom Fereday') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Tom Fereday')!} />}
           
           {/* Letter U immediately after the last T profile */}
           <div className={styles.letterCard} id="U">
@@ -1085,9 +1202,12 @@ export default function ProfilesPage() {
           </div>
           
           {/* U profiles */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Urban Couture')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'United Products')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Uocmas')} />
+          {profiles.find(p => p.name === 'Urban Couture') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Urban Couture')!} />}
+          {profiles.find(p => p.name === 'United Products') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'United Products')!} />}
+          {profiles.find(p => p.name === 'Uocmas') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Uocmas')!} />}
           
           {/* Letter V immediately after the last U profile */}
           <div className={styles.letterCard} id="V">
@@ -1095,9 +1215,12 @@ export default function ProfilesPage() {
           </div>
           
           {/* V profiles */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Valiant Hire')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Viabizzuno')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Vola')} />
+          {profiles.find(p => p.name === 'Valiant Hire') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Valiant Hire')!} />}
+          {profiles.find(p => p.name === 'Viabizzuno') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Viabizzuno')!} />}
+          {profiles.find(p => p.name === 'Vola') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Vola')!} />}
           
           {/* Letter W immediately after the last V profile */}
           <div className={styles.letterCard} id="W">
@@ -1105,10 +1228,14 @@ export default function ProfilesPage() {
           </div>
           
           {/* W profiles */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Wowowa Architecture')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Woods Bagot')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Wyer & Co.')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Workstead')} />
+          {profiles.find(p => p.name === 'Wowowa Architecture') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Wowowa Architecture')!} />}
+          {profiles.find(p => p.name === 'Woods Bagot') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Woods Bagot')!} />}
+          {profiles.find(p => p.name === 'Wyer & Co.') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Wyer & Co.')!} />}
+          {profiles.find(p => p.name === 'Workstead') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Workstead')!} />}
           
           {/* Letter X immediately after the last W profile */}
           <div className={styles.letterCard} id="X">
@@ -1116,11 +1243,16 @@ export default function ProfilesPage() {
           </div>
           
           {/* X profiles */}
-          <ProfileCard profile={profiles.find(p => p.name === 'X-Design Studio')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Xanthe Highfield')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Xavier Furniture')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Xenolith')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Xilo')} />
+          {profiles.find(p => p.name === 'X-Design Studio') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'X-Design Studio')!} />}
+          {profiles.find(p => p.name === 'Xanthe Highfield') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Xanthe Highfield')!} />}
+          {profiles.find(p => p.name === 'Xavier Furniture') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Xavier Furniture')!} />}
+          {profiles.find(p => p.name === 'Xenolith') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Xenolith')!} />}
+          {profiles.find(p => p.name === 'Xilo') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Xilo')!} />}
           
           {/* Letter Y immediately after the last X profile */}
           <div className={styles.letterCard} id="Y">
@@ -1128,11 +1260,16 @@ export default function ProfilesPage() {
           </div>
           
           {/* Y profiles */}
-          <ProfileCard profile={profiles.find(p => p.name === 'YSG Studio')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Yard Furniture')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Yellow Diva')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Youssofzay + Hart')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Yulparitja Artists')} />
+          {profiles.find(p => p.name === 'YSG Studio') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'YSG Studio')!} />}
+          {profiles.find(p => p.name === 'Yard Furniture') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Yard Furniture')!} />}
+          {profiles.find(p => p.name === 'Yellow Diva') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Yellow Diva')!} />}
+          {profiles.find(p => p.name === 'Youssofzay + Hart') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Youssofzay + Hart')!} />}
+          {profiles.find(p => p.name === 'Yulparitja Artists') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Yulparitja Artists')!} />}
           
           {/* Letter Z immediately after the last Y profile */}
           <div className={styles.letterCard} id="Z">
@@ -1140,11 +1277,16 @@ export default function ProfilesPage() {
           </div>
           
           {/* Z profiles */}
-          <ProfileCard profile={profiles.find(p => p.name === 'Zuster')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Zaha Hadid Design')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Zacariotto')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Zampese Architecture')} />
-          <ProfileCard profile={profiles.find(p => p.name === 'Zenith Interiors')} />
+          {profiles.find(p => p.name === 'Zuster') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Zuster')!} />}
+          {profiles.find(p => p.name === 'Zaha Hadid Design') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Zaha Hadid Design')!} />}
+          {profiles.find(p => p.name === 'Zacariotto') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Zacariotto')!} />}
+          {profiles.find(p => p.name === 'Zampese Architecture') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Zampese Architecture')!} />}
+          {profiles.find(p => p.name === 'Zenith Interiors') && 
+            <ProfileCard profile={profiles.find(p => p.name === 'Zenith Interiors')!} />}
           
           {/* 0-9 immediately after the last Z profile */}
           <div className={styles.letterCard} id="0-9">
@@ -1152,13 +1294,16 @@ export default function ProfilesPage() {
           </div>
           
           {/* 0-9 profiles */}
-          <ProfileCard profile={profiles.find(p => p.name === '1+2 Architecture')} />
-          <ProfileCard profile={profiles.find(p => p.name === '2 Design Group')} />
-          <ProfileCard profile={profiles.find(p => p.name === '3 Monkeys Audiovisual')} />
+          {profiles.find(p => p.name === '1+2 Architecture') && 
+            <ProfileCard profile={profiles.find(p => p.name === '1+2 Architecture')!} />}
+          {profiles.find(p => p.name === '2 Design Group') && 
+            <ProfileCard profile={profiles.find(p => p.name === '2 Design Group')!} />}
+          {profiles.find(p => p.name === '3 Monkeys Audiovisual') && 
+            <ProfileCard profile={profiles.find(p => p.name === '3 Monkeys Audiovisual')!} />}
         </div>
       </div>
 
-      <div className={styles.divider}></div>
+      <div className={styles.divider} />
 
       {/* Community Section */}
       <div className={styles.communitySection}>
@@ -1186,7 +1331,7 @@ export default function ProfilesPage() {
         </div>
       </div>
 
-      <div className={styles.divider}></div>
+      <div className={styles.divider} />
 
       <div className={styles.trendingSection}>
         <h3 className={styles.trendingTitle}>TRENDING NOW</h3>
