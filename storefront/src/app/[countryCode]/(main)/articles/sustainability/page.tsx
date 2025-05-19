@@ -200,7 +200,7 @@ export default function ArticlesPage() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.articlesLabel}>ARTICLES</div>
+      <div className={styles.subheading}>ARTICLES</div>
       <h1 className={styles.pageTitle}>THE SUSTAINABILITY SERIES</h1>
       
       <div className={styles.categoryNav}>
