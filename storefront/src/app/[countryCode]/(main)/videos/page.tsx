@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './videos.module.css';
-import TrendingNow from '@/modules/layout/templates/TrendingNow';
+import TrendingNow from '../../../../modules/layout/templates/TrendingNow';
 
 export default function VideosPage() {
   // Sample trending articles data
