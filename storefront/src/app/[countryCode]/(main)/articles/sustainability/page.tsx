@@ -200,7 +200,10 @@ export default function ArticlesPage() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.pageTitle}>THE SUSTAINABILITY SERIES</h1>
+      <div className={styles.pageHeader}>
+        <div className={styles.subheading}>ARTICLES</div>
+        <h1 className={styles.pageTitle}>THE SUSTAINABILITY SERIES</h1>
+      </div>
       
       <div className={styles.categoryNav}>
         {categories.map((category, index) => (
