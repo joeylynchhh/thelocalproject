@@ -567,12 +567,12 @@ export default function VideosPage() {
               </button>
             </div>
             <div className={styles.recaptcha}>
-              <div className="g-recaptcha" data-sitekey="your-recaptcha-site-key"></div>
+              <div className="g-recaptcha" data-sitekey="your-recaptcha-site-key" />
             </div>
           </div>
 
-          {/* Horizontal line before TrendingNow */}
-          <div className={styles.horizontalLine}></div>
+          {/* Single horizontal line before TrendingNow */}
+          <div className={styles.horizontalLine} />
           
           {/* TrendingNow component moved to bottom */}
           <TrendingNow articles={trendingArticles} />
