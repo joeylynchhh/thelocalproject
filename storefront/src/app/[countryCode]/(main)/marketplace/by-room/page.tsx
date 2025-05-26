@@ -346,8 +346,8 @@ export default function ArticlesPage() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.topLabel}>THE LOCAL MARKETPLACE</div>
-      <h1 className={styles.pageTitle}>ROOM</h1>
+      <div className={styles.topLabel} style={{ textAlign: 'center' }}>THE LOCAL MARKETPLACE</div>
+      <h1 className={styles.pageTitle} style={{ textAlign: 'center' }}>ROOM</h1>
       
       <div className={styles.categoryNav}>
         {categories.map((category, index) => (
