@@ -549,7 +549,12 @@ export default function VideosPage() {
             </div>
           </div>
           
-          {/* Newsletter signup moved before TrendingNow */}
+          {/* Add TrendingNow component here */}
+          <div className={styles.horizontalLine}></div>
+          <TrendingNow articles={trendingArticles} />
+          <div className={styles.horizontalLine}></div>
+          
+          {/* Newsletter Signup */}
           <div className={styles.communitySection}>
             <h2>THE LOCAL PROJECT</h2>
             <h3>Community</h3>
@@ -567,15 +572,9 @@ export default function VideosPage() {
               </button>
             </div>
             <div className={styles.recaptcha}>
-              <div className="g-recaptcha" data-sitekey="your-recaptcha-site-key" />
+              <div className="g-recaptcha" data-sitekey="your-recaptcha-site-key"></div>
             </div>
           </div>
-          
-          {/* Single horizontal line before TrendingNow */}
-          <div className={styles.horizontalLine} />
-          
-          {/* TrendingNow component moved to bottom */}
-          <TrendingNow articles={trendingArticles} />
         </div>
       </div>
     </div>
