@@ -382,3 +382,14 @@
       font-size: 2.5rem;
     }
   }
+
+.topLabel {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #666666;
+  text-align: center;
+  margin: 60px 0 40px;
+}
