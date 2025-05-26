@@ -7,39 +7,39 @@ import styles from './about.module.css';
 import TrendingNow from '@/modules/layout/templates/TrendingNow';
 
 export default function AboutPage() {
-  // Define trending articles data based on current content
   const trendingArticles = [
     {
       id: 1,
-      slug: 'seascape-patterson-associates',
+      slug: 'seascape-by-patterson-associates',
       title: 'Seascape by Patterson Associates',
       category: 'BOOK FEATURE',
       image: '/images/trending-1.jpg',
+      hasVideo: false
     },
     {
       id: 2,
-      slug: 'waiheke-house-cheshire-architects',
+      slug: 'a-process-of-discovery-waiheke-house-by-cheshire-architects',
       title: 'A Process of Discovery – Waiheke House by Cheshire Architects',
       category: 'BOOK FEATURE • ISSUE 03 FEATURE • VIDEO FEATURE',
       image: '/images/trending-2.jpg',
-      hasVideo: true,
+      hasVideo: true
     },
     {
       id: 3,
-      slug: 'waimataruru-pac-studio',
+      slug: 'a-respectful-balance-waimataruru-by-pac-studio',
       title: 'A Respectful Balance – Waimataruru by Pac Studio and Kristina Pickford Design',
       category: 'VIDEO FEATURE',
       image: '/images/trending-3.jpg',
-      hasVideo: true,
+      hasVideo: true
     },
     {
       id: 4,
-      slug: 'palms-residence-olson-kundig',
+      slug: 'forming-deep-connections-palms-residence-by-olson-kundig',
       title: 'Forming Deep Connections – Palms Residence by Olson Kundig',
       category: 'VIDEO FEATURE',
       image: '/images/trending-4.jpg',
-      hasVideo: true,
-    },
+      hasVideo: true
+    }
   ];
 
   return (
@@ -278,7 +278,7 @@ export default function AboutPage() {
       
       {/* Replace Trending Now section with component */}
       <TrendingNow 
-        articles={trendingArticles} 
+        articles={trendingArticles}
         heading="Trending now"
       />
     </div>
