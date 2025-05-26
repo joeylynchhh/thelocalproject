@@ -4,8 +4,44 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './about.module.css';
+import TrendingNow from '@/modules/layout/templates/TrendingNow';
 
 export default function AboutPage() {
+  // Define trending articles data based on current content
+  const trendingArticles = [
+    {
+      id: 1,
+      slug: 'seascape-patterson-associates',
+      title: 'Seascape by Patterson Associates',
+      category: 'BOOK FEATURE',
+      image: '/images/trending-1.jpg',
+    },
+    {
+      id: 2,
+      slug: 'waiheke-house-cheshire-architects',
+      title: 'A Process of Discovery – Waiheke House by Cheshire Architects',
+      category: 'BOOK FEATURE • ISSUE 03 FEATURE • VIDEO FEATURE',
+      image: '/images/trending-2.jpg',
+      hasVideo: true,
+    },
+    {
+      id: 3,
+      slug: 'waimataruru-pac-studio',
+      title: 'A Respectful Balance – Waimataruru by Pac Studio and Kristina Pickford Design',
+      category: 'VIDEO FEATURE',
+      image: '/images/trending-3.jpg',
+      hasVideo: true,
+    },
+    {
+      id: 4,
+      slug: 'palms-residence-olson-kundig',
+      title: 'Forming Deep Connections – Palms Residence by Olson Kundig',
+      category: 'VIDEO FEATURE',
+      image: '/images/trending-4.jpg',
+      hasVideo: true,
+    },
+  ];
+
   return (
     <div className={styles.container}>
       {/* Hero Section */}
@@ -240,68 +276,11 @@ export default function AboutPage() {
         </div>
       </section>
       
-      {/* Trending Now Section */}
-      <section className={styles.trendingSection}>
-        <h2 className={styles.trendingTitle}>Trending now</h2>
-        
-        <div className={styles.trendingGrid}>
-          {/* Trending Item 1 */}
-          <div className={styles.trendingItem}>
-            <div className={styles.trendingImageContainer}>
-              <Image 
-                src="/images/trending-1.jpg" 
-                alt="Seascape by Patterson Associates" 
-                fill
-                className={styles.trendingImage}
-              />
-            </div>
-            <p className={styles.trendingTag}>BOOK FEATURE</p>
-            <h3 className={styles.trendingItemTitle}>Seascape by Patterson Associates</h3>
-          </div>
-          
-          {/* Trending Item 2 */}
-          <div className={styles.trendingItem}>
-            <div className={styles.trendingImageContainer}>
-              <Image 
-                src="/images/trending-2.jpg" 
-                alt="A Process of Discovery – Waiheke House by Cheshire Architects" 
-                fill
-                className={styles.trendingImage}
-              />
-            </div>
-            <p className={styles.trendingTag}>BOOK FEATURE • ISSUE 03 FEATURE • VIDEO FEATURE</p>
-            <h3 className={styles.trendingItemTitle}>A Process of Discovery – Waiheke House by Cheshire Architects</h3>
-          </div>
-          
-          {/* Trending Item 3 */}
-          <div className={styles.trendingItem}>
-            <div className={styles.trendingImageContainer}>
-              <Image 
-                src="/images/trending-3.jpg" 
-                alt="A Respectful Balance – Waimataruru by Pac Studio and Kristina Pickford Design" 
-                fill
-                className={styles.trendingImage}
-              />
-            </div>
-            <p className={styles.trendingTag}>VIDEO FEATURE</p>
-            <h3 className={styles.trendingItemTitle}>A Respectful Balance – Waimataruru by Pac Studio and Kristina Pickford Design</h3>
-          </div>
-          
-          {/* Trending Item 4 */}
-          <div className={styles.trendingItem}>
-            <div className={styles.trendingImageContainer}>
-              <Image 
-                src="/images/trending-4.jpg" 
-                alt="Forming Deep Connections – Palms Residence by Olson Kundig" 
-                fill
-                className={styles.trendingImage}
-              />
-            </div>
-            <p className={styles.trendingTag}>VIDEO FEATURE</p>
-            <h3 className={styles.trendingItemTitle}>Forming Deep Connections – Palms Residence by Olson Kundig</h3>
-          </div>
-        </div>
-      </section>
+      {/* Replace Trending Now section with component */}
+      <TrendingNow 
+        articles={trendingArticles} 
+        heading="Trending now"
+      />
     </div>
   );
 } 
