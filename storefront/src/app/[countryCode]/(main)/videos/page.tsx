@@ -570,7 +570,7 @@ export default function VideosPage() {
               <div className="g-recaptcha" data-sitekey="your-recaptcha-site-key" />
             </div>
           </div>
-
+          
           {/* Single horizontal line before TrendingNow */}
           <div className={styles.horizontalLine} />
           
