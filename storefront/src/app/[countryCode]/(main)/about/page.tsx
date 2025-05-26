@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './about.module.css';
-import TrendingNow from '../../../../modules/layout/templates/TrendingNow';
+import TrendingNow from '@/modules/layout/templates/TrendingNow';
 
 export default function AboutPage() {
   const trendingArticles = [
@@ -37,6 +37,14 @@ export default function AboutPage() {
       title: 'Forming Deep Connections – Palms Residence by Olson Kundig',
       category: 'VIDEO FEATURE',
       image: '/images/trending-4.jpg',
+      hasVideo: true
+    },
+    {
+      id: 5,
+      slug: 'coastal-pavilion',
+      title: 'Coastal Pavilion by Studio Jackson Scott',
+      category: 'VIDEO FEATURE',
+      image: '/images/trending-5.jpg',
       hasVideo: true
     }
   ];
