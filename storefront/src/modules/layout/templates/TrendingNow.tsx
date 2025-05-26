@@ -9,7 +9,7 @@ export interface TrendingArticle {
   title: string;
   category: string;
   hasVideo?: boolean;
-  image?: string; // URL to actual image if available
+  image?: string;
 }
 
 interface TrendingNowProps {
@@ -19,23 +19,28 @@ interface TrendingNowProps {
 
 /**
  * TrendingNow component displays a grid of trending articles
- * Based on the design from the sustainability page
+ * Matches the design from the sustainability page exactly
  */
 const TrendingNow: React.FC<TrendingNowProps> = ({ 
   articles, 
   heading = "TRENDING NOW" 
 }) => {
   return (
-    <div className={styles.trendingNowSection}>
+    <section className={styles.trendingNowSection}>
       <h3 className={styles.trendingNowHeading}>{heading}</h3>
       
       <div className={styles.trendingArticlesGrid}>
         {articles.map((article) => (
-          <div key={article.id} className={styles.trendingArticle}>
-            <Link href={`/articles/${article.slug}`}>
+          <article key={article.id} className={styles.trendingArticle}>
+            <Link href={`/articles/${article.slug}`} className={styles.articleLink}>
               <div className={styles.trendingImage}>
                 {article.image ? (
-                  <img src={article.image} alt={article.title} className={styles.articleImg} />
+                  <img 
+                    src={article.image} 
+                    alt="" 
+                    className={styles.articleImg}
+                    loading="lazy"
+                  />
                 ) : (
                   <div className={styles.trendingImagePlaceholder} />
                 )}
@@ -45,13 +50,15 @@ const TrendingNow: React.FC<TrendingNowProps> = ({
                   </div>
                 )}
               </div>
-              <div className={styles.trendingCategory}>{article.category}</div>
-              <h4 className={styles.trendingTitle}>{article.title}</h4>
+              <div className={styles.articleContent}>
+                <div className={styles.trendingCategory}>{article.category}</div>
+                <h4 className={styles.trendingTitle}>{article.title}</h4>
+              </div>
             </Link>
-          </div>
+          </article>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
