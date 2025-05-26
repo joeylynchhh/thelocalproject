@@ -549,12 +549,7 @@ export default function VideosPage() {
             </div>
           </div>
           
-          {/* Add TrendingNow component here */}
-          <div className={styles.horizontalLine}></div>
-          <TrendingNow articles={trendingArticles} />
-          <div className={styles.horizontalLine}></div>
-          
-          {/* Newsletter Signup */}
+          {/* Newsletter signup moved before TrendingNow */}
           <div className={styles.communitySection}>
             <h2>THE LOCAL PROJECT</h2>
             <h3>Community</h3>
@@ -575,6 +570,12 @@ export default function VideosPage() {
               <div className="g-recaptcha" data-sitekey="your-recaptcha-site-key"></div>
             </div>
           </div>
+
+          {/* Horizontal line before TrendingNow */}
+          <div className={styles.horizontalLine}></div>
+          
+          {/* TrendingNow component moved to bottom */}
+          <TrendingNow articles={trendingArticles} />
         </div>
       </div>
     </div>
