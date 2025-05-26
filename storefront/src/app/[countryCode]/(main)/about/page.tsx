@@ -10,15 +10,14 @@ export default function AboutPage() {
   const trendingArticles = [
     {
       id: 1,
-      slug: 'seascape-by-patterson-associates',
+      slug: 'seascape-patterson-associates',
       title: 'Seascape by Patterson Associates',
       category: 'BOOK FEATURE',
-      image: '/images/trending-1.jpg',
-      hasVideo: false
+      image: '/images/trending-1.jpg'
     },
     {
       id: 2,
-      slug: 'a-process-of-discovery-waiheke-house-by-cheshire-architects',
+      slug: 'waiheke-house-cheshire-architects',
       title: 'A Process of Discovery – Waiheke House by Cheshire Architects',
       category: 'BOOK FEATURE • ISSUE 03 FEATURE • VIDEO FEATURE',
       image: '/images/trending-2.jpg',
@@ -26,7 +25,7 @@ export default function AboutPage() {
     },
     {
       id: 3,
-      slug: 'a-respectful-balance-waimataruru-by-pac-studio',
+      slug: 'waimataruru-pac-studio',
       title: 'A Respectful Balance – Waimataruru by Pac Studio and Kristina Pickford Design',
       category: 'VIDEO FEATURE',
       image: '/images/trending-3.jpg',
@@ -34,7 +33,7 @@ export default function AboutPage() {
     },
     {
       id: 4,
-      slug: 'forming-deep-connections-palms-residence-by-olson-kundig',
+      slug: 'palms-residence-olson-kundig',
       title: 'Forming Deep Connections – Palms Residence by Olson Kundig',
       category: 'VIDEO FEATURE',
       image: '/images/trending-4.jpg',
@@ -276,9 +275,9 @@ export default function AboutPage() {
         </div>
       </section>
       
-      {/* Replace Trending Now section with component */}
+      {/* Replace Trending Now Section */}
       <TrendingNow 
-        articles={trendingArticles}
+        articles={trendingArticles} 
         heading="Trending now"
       />
     </div>
