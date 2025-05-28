@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './about.module.css';
-import TrendingNow from '../../../modules/layout/templates/TrendingNow';
+import TrendingNow from '@/modules/layout/templates/TrendingNow';
 
 export default function AboutPage() {
   const trendingArticles = [
