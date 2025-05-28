@@ -13,7 +13,7 @@ export default function VideosPage() {
       image: "/images/trending/seascape.jpg",
       imageAlt: "Seascape by Patterson Associates",
       type: "BOOK FEATURE",
-      title: "Seascape by Patterson Associates",
+      title: "Seascape by Patterson Associate",
       hasVideo: true
     },
     {
