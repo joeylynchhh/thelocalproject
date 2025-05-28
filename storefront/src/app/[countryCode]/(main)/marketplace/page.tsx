@@ -2,8 +2,52 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './marketplace.module.css';
+import TrendingNow from '@modules/layout/templates/TrendingNow';
 
 export default function MarketplacePage() {
+  // Add trending articles data
+  const trendingArticles = [
+    {
+      id: 1,
+      slug: 'seascape-patterson-associates',
+      title: 'Seascape by Patterson Associates',
+      category: 'BOOK FEATURE',
+      image: '/images/trending/seascape.jpg'
+    },
+    {
+      id: 2,
+      slug: 'waiheke-house-cheshire-architects',
+      title: 'A Process of Discovery – Waiheke House by Cheshire Architects',
+      category: 'BOOK FEATURE • ISSUE 03 FEATURE • VIDEO FEATURE',
+      image: '/images/trending/waiheke-house.jpg',
+      hasVideo: true
+    },
+    {
+      id: 3,
+      slug: 'waimataruru-pac-studio',
+      title: 'A Respectful Balance – Waimataruru by Pac Studio and Kristina Pickford Design',
+      category: 'VIDEO FEATURE',
+      image: '/images/trending/waimataruru.jpg',
+      hasVideo: true
+    },
+    {
+      id: 4,
+      slug: 'palms-residence-olson-kundig',
+      title: 'Forming Deep Connections – Palms Residence by Olson Kundig',
+      category: 'VIDEO FEATURE',
+      image: '/images/trending/palms-residence.jpg',
+      hasVideo: true
+    },
+    {
+      id: 5,
+      slug: 'yukari-house-tanev-muir',
+      title: 'Yukari House by Tanev Muir Architects',
+      category: 'VIDEO FEATURE',
+      image: '/images/trending/yukari-house.jpg',
+      hasVideo: true
+    }
+  ];
+
   return (
     <div className={styles['marketplace-page']}>
       {/* Page Header */}
@@ -876,6 +920,24 @@ export default function MarketplacePage() {
           </div>
         </div>
       </div>
+
+      {/* Hidden but preserved original trending section */}
+      <div style={{ display: 'none' }}>
+        <div className={styles.trendingVideos}>
+          <h3>TRENDING NOW</h3>
+          <div className={styles.trendingGrid}>
+            {/* ... existing trending videos ... */}
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.divider} />
+
+      {/* Replace hard-coded trending section with TrendingNow component */}
+      <TrendingNow 
+        articles={trendingArticles} 
+        heading="TRENDING NOW"
+      />
     </div>
   );
 } 
