@@ -2,8 +2,52 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './product-directory.module.css';
+import TrendingNow from '@modules/layout/templates/TrendingNow';
 
 export default function MarketplacePage() {
+  // Add trending articles data
+  const trendingArticles = [
+    {
+      id: 1,
+      slug: 'seascape-patterson-associates',
+      title: 'Seascape by Patterson Associates',
+      category: 'BOOK FEATURE',
+      image: '/images/trending/seascape.jpg'
+    },
+    {
+      id: 2,
+      slug: 'waiheke-house-cheshire-architects',
+      title: 'A Process of Discovery – Waiheke House by Cheshire Architects',
+      category: 'BOOK FEATURE • ISSUE 03 FEATURE • VIDEO FEATURE',
+      image: '/images/trending/waiheke-house.jpg',
+      hasVideo: true
+    },
+    {
+      id: 3,
+      slug: 'waimataruru-pac-studio',
+      title: 'A Respectful Balance – Waimataruru by Pac Studio and Kristina Pickford Design',
+      category: 'VIDEO FEATURE',
+      image: '/images/trending/waimataruru.jpg',
+      hasVideo: true
+    },
+    {
+      id: 4,
+      slug: 'palms-residence-olson-kundig',
+      title: 'Forming Deep Connections – Palms Residence by Olson Kundig',
+      category: 'VIDEO FEATURE',
+      image: '/images/trending/palms-residence.jpg',
+      hasVideo: true
+    },
+    {
+      id: 5,
+      slug: 'yukari-house',
+      title: 'Yukari House by Tanev Muir Architects',
+      category: 'VIDEO FEATURE',
+      image: '/images/trending/yukari-house.jpg',
+      hasVideo: true
+    }
+  ];
+
   return (
     <div className={styles['marketplace-page']}>
       {/* Page Header */}
@@ -863,102 +907,14 @@ export default function MarketplacePage() {
 
         <div className={styles.horizontalLine} />
 
-        {/* Trending Now Section */}
-        <div className={styles.trendingSection}>
-          <h2>TRENDING NOW</h2>
-          
-          <div className={styles.trendingGrid}>
-            {/* Video 1 */}
-            <Link href="/videos/seascape" className={styles.trendingCard}>
-              <div className={styles.videoThumbnail}>
-                <Image 
-                  src="/images/videos/seascape.jpg" 
-                  alt="Seascape by Patterson Associates" 
-                  width={600} 
-                  height={450} 
-                  layout="responsive"
-                />
-                <div className={styles.playButton}>
-                  <div className={styles.playIcon}></div>
-                </div>
-              </div>
-              <span className={styles.videoLabel}>BOOK FEATURE</span>
-              <h3>Seascape by Patterson Associates</h3>
-            </Link>
-            
-            {/* Video 2 */}
-            <Link href="/videos/waiheke-house" className={styles.trendingCard}>
-              <div className={styles.videoThumbnail}>
-                <Image 
-                  src="/images/videos/waiheke-house.jpg" 
-                  alt="A Process of Discovery – Waiheke House by Cheshire Architects" 
-                  width={600} 
-                  height={450} 
-                  layout="responsive"
-                />
-                <div className={styles.playButton}>
-                  <div className={styles.playIcon}></div>
-                </div>
-              </div>
-              <span className={styles.videoLabel}>BOOK FEATURE • ISSUE 03 FEATURE • VIDEO FEATURE</span>
-              <h3>A Process of Discovery – Waiheke House by Cheshire Architects</h3>
-            </Link>
-            
-            {/* Video 3 */}
-            <Link href="/videos/respectful-balance" className={styles.trendingCard}>
-              <div className={styles.videoThumbnail}>
-                <Image 
-                  src="/images/videos/respectful-balance.jpg" 
-                  alt="A Respectful Balance – Waimataruru by Pac Studio and Kristina Pickford Design" 
-                  width={600} 
-                  height={450} 
-                  layout="responsive"
-                />
-                <div className={styles.playButton}>
-                  <div className={styles.playIcon}></div>
-                </div>
-              </div>
-              <span className={styles.videoLabel}>VIDEO FEATURE</span>
-              <h3>A Respectful Balance – Waimataruru by Pac Studio and Kristina Pickford Design</h3>
-            </Link>
-            
-            {/* Video 4 */}
-            <Link href="/videos/forming-deep-connections" className={styles.trendingCard}>
-              <div className={styles.videoThumbnail}>
-                <Image 
-                  src="/images/videos/forming-deep-connections.jpg" 
-                  alt="Forming Deep Connections – Palms Residence by Olson Kundig" 
-                  width={600} 
-                  height={450} 
-                  layout="responsive"
-                />
-                <div className={styles.playButton}>
-                  <div className={styles.playIcon}></div>
-                </div>
-              </div>
-              <span className={styles.videoLabel}>VIDEO FEATURE</span>
-              <h3>Forming Deep Connections – Palms Residence by Olson Kundig</h3>
-            </Link>
-            
-            {/* Video 5 */}
-            <Link href="/videos/yukari-house" className={styles.trendingCard}>
-              <div className={styles.videoThumbnail}>
-                <Image 
-                  src="/images/videos/yukari-house.jpg" 
-                  alt="Yukari House by Tanev Muir Architects" 
-                  width={600} 
-                  height={450} 
-                  layout="responsive"
-                />
-                <div className={styles.playButton}>
-                  <div className={styles.playIcon}></div>
-                </div>
-              </div>
-              <span className={styles.videoLabel}>VIDEO FEATURE</span>
-              <h3>Yukari House by Tanev Muir Architects</h3>
-            </Link>
-          </div>
-        </div>
+        {/* Add divider before trending section */}
+        <div className={styles.divider} />
+
+        {/* Replace hard-coded trending section with TrendingNow component */}
+        <TrendingNow 
+          articles={trendingArticles} 
+          heading="TRENDING NOW"
+        />
       </div>
     </div>
   );

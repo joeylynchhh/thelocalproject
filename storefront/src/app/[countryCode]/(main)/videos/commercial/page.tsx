@@ -4,8 +4,51 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './commercial.module.css';
+import TrendingNow from '@modules/layout/templates/TrendingNow';
 
 export default function VideosPage() {
+  const trendingArticles = [
+    {
+      id: 1,
+      slug: 'seascape-patterson-associates',
+      title: 'Seascape by Patterson Associates',
+      category: 'BOOK FEATURE',
+      image: '/images/trending/seascape.jpg'
+    },
+    {
+      id: 2,
+      slug: 'waiheke-house-cheshire-architects',
+      title: 'A Process of Discovery – Waiheke House by Cheshire Architects',
+      category: 'BOOK FEATURE • ISSUE 03 FEATURE • VIDEO FEATURE',
+      image: '/images/trending/waiheke-house.jpg',
+      hasVideo: true
+    },
+    {
+      id: 3,
+      slug: 'waimataruru-pac-studio',
+      title: 'A Respectful Balance – Waimataruru by Pac Studio and Kristina Pickford Design',
+      category: 'VIDEO FEATURE',
+      image: '/images/trending/waimataruru.jpg',
+      hasVideo: true
+    },
+    {
+      id: 4,
+      slug: 'palms-residence-olson-kundig',
+      title: 'Forming Deep Connections – Palms Residence by Olson Kundig',
+      category: 'VIDEO FEATURE',
+      image: '/images/trending/palms-residence.jpg',
+      hasVideo: true
+    },
+    {
+      id: 5,
+      slug: 'yukari-house',
+      title: 'Yukari House by Tanev Muir Architects',
+      category: 'VIDEO FEATURE',
+      image: '/images/trending/yukari-house.jpg',
+      hasVideo: true
+    }
+  ];
+
   return (
     <div className={styles['videos-page']}>
       {/* Page Header */}
@@ -385,101 +428,10 @@ export default function VideosPage() {
 
       <div className={styles.divider} />
 
-      <div className={styles.trendingSection}>
-        <h3 className={styles.trendingTitle}>TRENDING NOW</h3>
-        
-        <div className={styles.trendingGrid}>
-          {/* Article 1 */}
-          <div className={styles.trendingArticle}>
-            <div className={styles.trendingImageContainer}>
-              <img 
-                src="/images/trending/seascape.jpg" 
-                alt="Seascape by Patterson Associates" 
-                className={styles.trendingImage} 
-              />
-              <div className={styles.playButton}>
-                <div className={styles.playIcon} />
-              </div>
-            </div>
-            <div className={styles.trendingMeta}>
-              <span className={styles.trendingType}>BOOK FEATURE</span>
-            </div>
-            <h4 className={styles.trendingTitle}>Seascape by Patterson Associates</h4>
-          </div>
-          
-          {/* Article 2 */}
-          <div className={styles.trendingArticle}>
-            <div className={styles.trendingImageContainer}>
-              <img 
-                src="/images/trending/waiheke-house.jpg" 
-                alt="A Process of Discovery – Waiheke House by Cheshire Architects" 
-                className={styles.trendingImage} 
-              />
-              <div className={styles.playButton}>
-                <div className={styles.playIcon} />
-              </div>
-            </div>
-            <div className={styles.trendingMeta}>
-              <span className={styles.trendingType}>BOOK FEATURE • ISSUE 03 FEATURE • VIDEO FEATURE</span>
-            </div>
-            <h4 className={styles.trendingTitle}>A Process of Discovery – Waiheke House by Cheshire Architects</h4>
-          </div>
-          
-          {/* Article 3 */}
-          <div className={styles.trendingArticle}>
-            <div className={styles.trendingImageContainer}>
-              <img 
-                src="/images/trending/waimataruru.jpg" 
-                alt="A Respectful Balance – Waimataruru by Pac Studio and Kristina Pickford Design" 
-                className={styles.trendingImage} 
-              />
-              <div className={styles.playButton}>
-                <div className={styles.playIcon} />
-              </div>
-            </div>
-            <div className={styles.trendingMeta}>
-              <span className={styles.trendingType}>VIDEO FEATURE</span>
-            </div>
-            <h4 className={styles.trendingTitle}>A Respectful Balance – Waimataruru by Pac Studio and Kristina Pickford Design</h4>
-          </div>
-          
-          {/* Article 4 */}
-          <div className={styles.trendingArticle}>
-            <div className={styles.trendingImageContainer}>
-              <img 
-                src="/images/trending/palms-residence.jpg" 
-                alt="Forming Deep Connections – Palms Residence by Olson Kundig" 
-                className={styles.trendingImage} 
-              />
-              <div className={styles.playButton}>
-                <div className={styles.playIcon} />
-              </div>
-            </div>
-            <div className={styles.trendingMeta}>
-              <span className={styles.trendingType}>VIDEO FEATURE</span>
-            </div>
-            <h4 className={styles.trendingTitle}>Forming Deep Connections – Palms Residence by Olson Kundig</h4>
-          </div>
-          
-          {/* Article 5 */}
-          <div className={styles.trendingArticle}>
-            <div className={styles.trendingImageContainer}>
-              <img 
-                src="/images/trending/yukari-house.jpg" 
-                alt="Yukari House by Tanev Muir Architects" 
-                className={styles.trendingImage} 
-              />
-              <div className={styles.playButton}>
-                <div className={styles.playIcon} />
-              </div>
-            </div>
-            <div className={styles.trendingMeta}>
-              <span className={styles.trendingType}>VIDEO FEATURE</span>
-            </div>
-            <h4 className={styles.trendingTitle}>Yukari House by Tanev Muir Architects</h4>
-          </div>
-        </div>
-      </div>
+      <TrendingNow 
+        articles={trendingArticles} 
+        heading="TRENDING NOW"
+      />
     </div>
   );
 } 
