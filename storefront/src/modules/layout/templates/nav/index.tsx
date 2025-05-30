@@ -127,36 +127,43 @@ export default function Header() {
         {/* Main Navigation */}
         <nav className={styles.nav}>
           <ul className={styles.navList}>
-            <li 
-              onMouseEnter={() => setActiveMenu('publications')}
-              onMouseLeave={() => setActiveMenu(null)}
-            >
-              <Link href="/publications" className={styles.navLink}>PRINT PUBLICATION</Link>
-            </li>
-            <li 
-              onMouseEnter={() => setActiveMenu('articles')}
-              onMouseLeave={() => setActiveMenu(null)}
-            >
-              <Link href="/articles" className={styles.navLink}>ARTICLES</Link>
-            </li>
-            <li 
-              onMouseEnter={() => setActiveMenu('videos')}
-              onMouseLeave={() => setActiveMenu(null)}
-            >
-              <Link href="/videos" className={styles.navLink}>VIDEOS</Link>
-            </li>
-            <li 
-              onMouseEnter={() => setActiveMenu('marketplace')}
-              onMouseLeave={() => setActiveMenu(null)}
-            >
-              <Link href="/marketplace" className={styles.navLink}>THE LOCAL MARKETPLACE</Link>
-            </li>
-            <li 
-              onMouseEnter={() => setActiveMenu('profiles')}
-              onMouseLeave={() => setActiveMenu(null)}
-            >
-              <Link href="/profiles" className={styles.navLink}>PROFILES</Link>
-            </li>
+            {Object.entries(subMenus).map(([key, items]) => (
+              <li 
+                key={key}
+                className={styles.navItem}
+                onMouseEnter={() => setActiveMenu(key)}
+                onMouseLeave={(e) => {
+                  // Check if we're not moving to the submenu
+                  const relatedTarget = e.relatedTarget as HTMLElement;
+                  if (!relatedTarget?.closest(`.${styles.navItem}`)) {
+                    setActiveMenu(null);
+                  }
+                }}
+              >
+                <Link href={`/${key}`} className={styles.navLink}>
+                  {key === 'publications' && 'PRINT PUBLICATION'}
+                  {key === 'articles' && 'ARTICLES'}
+                  {key === 'videos' && 'VIDEOS'}
+                  {key === 'marketplace' && 'THE LOCAL MARKETPLACE'}
+                  {key === 'profiles' && 'PROFILES'}
+                </Link>
+                {activeMenu === key && (
+                  <div 
+                    className={styles.submenu}
+                  >
+                    <ul className={styles.submenuList}>
+                      {items.map((item) => (
+                        <li key={`${key}-${item.label}`}>
+                          <Link href={item.href} className={styles.submenuLink}>
+                            {item.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </li>
+            ))}
             <li>
               <Link href="/advertise" className={styles.navLink}>ADVERTISE</Link>
             </li>
@@ -166,25 +173,6 @@ export default function Header() {
           </ul>
         </nav>
       </header>
-      
-      {/* Moved submenu outside of header to correctly position it */}
-      {activeMenu && subMenus[activeMenu] && (
-        <div 
-          className={styles.submenu}
-          onMouseEnter={() => setActiveMenu(activeMenu)}
-          onMouseLeave={() => setActiveMenu(null)}
-        >
-          <ul className={styles.submenuList}>
-            {subMenus[activeMenu].map((item, index) => (
-              <li key={`${activeMenu}-${item.label}`}>
-                <Link href={item.href} className={styles.submenuLink}>
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
     </>
   );
 } 
