@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import styles from './residential.module.css';
+import TrendingNow from '@modules/layout/templates/TrendingNow';
 
 // Article type definition
 type Article = {
@@ -340,17 +341,11 @@ export default function ArticlesPage() {
             </div>
           </div>
 
-          {/* Trending Section - Hidden but preserved */}
-          <div className={styles.trendingSection} style={{ display: 'none' }}>
-            <h4>Trending now</h4>
-            <ul>
-              <li><Link href="/articles/seascape-patterson-associates">Book Feature Seascape by Patterson Associates</Link></li>
-              <li><Link href="/articles/waiheke-house-cheshire-architects">Book Feature • Issue 03 Feature • Video Feature A Process of Discovery – Waiheke House by Cheshire Architects</Link></li>
-              <li><Link href="/articles/waimataruru-pac-studio">Video Feature A Respectful Balance – Waimataruru by Pac Studio and Kristina Pickford Design</Link></li>
-              <li><Link href="/articles/palms-residence-olson-kundig">Video Feature Forming Deep Connections – Palms Residence by Olson Kundig</Link></li>
-              <li><Link href="/articles/yukari-house-tanev-muir">Video Feature Yukari House by Tanev Muir Architects</Link></li>
-            </ul>
-          </div>
+          {/* Add TrendingNow component */}
+          <TrendingNow 
+            articles={trendingArticles} 
+            heading="TRENDING NOW"
+          />
         </div>
       </div>
     </div>

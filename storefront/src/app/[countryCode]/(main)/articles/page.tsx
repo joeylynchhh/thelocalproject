@@ -5,6 +5,7 @@ import Link from 'next/link';
 import styles from './articles.module.css';
 import ArticleCard from '../../../../modules/articles/components/ArticleCard';
 import ArticleFilters from '../../../../modules/articles/components/ArticleFilters';
+import TrendingNow from '@modules/layout/templates/TrendingNow';
 
 // Article type definition
 type Article = {
@@ -110,6 +111,50 @@ export default function ArticlesPage() {
 
   // State for showing/hiding filters
   const [showFilters, setShowFilters] = useState(false);
+
+  // Replace hard-coded trending section with TrendingNow component
+  const trendingArticles = [
+    {
+      id: 1,
+      title: "Seascape by Patterson Associates",
+      category: "Book Feature",
+      image: "/images/seascape-patterson-associates.jpg",
+      excerpt: "A stunning exploration of the ocean's beauty and power by Patterson Associates.",
+      slug: "seascape-patterson-associates"
+    },
+    {
+      id: 2,
+      title: "Waiheke House by Cheshire Architects",
+      category: "Book Feature",
+      image: "/images/waiheke-house-cheshire-architects.jpg",
+      excerpt: "A stunning exploration of the ocean's beauty and power by Patterson Associates.",
+      slug: "waiheke-house-cheshire-architects"
+    },
+    {
+      id: 3,
+      title: "Waimataruru by Pac Studio and Kristina Pickford Design",
+      category: "Video Feature",
+      image: "/images/waimataruru-pac-studio.jpg",
+      excerpt: "A stunning exploration of the ocean's beauty and power by Patterson Associates.",
+      slug: "waimataruru-pac-studio"
+    },
+    {
+      id: 4,
+      title: "Palms Residence by Olson Kundig",
+      category: "Video Feature",
+      image: "/images/palms-residence-olson-kundig.jpg",
+      excerpt: "A stunning exploration of the ocean's beauty and power by Patterson Associates.",
+      slug: "palms-residence-olson-kundig"
+    },
+    {
+      id: 5,
+      title: "Yukari House by Tanev Muir Architects",
+      category: "Video Feature",
+      image: "/images/yukari-house-tanev-muir.jpg",
+      excerpt: "A stunning exploration of the ocean's beauty and power by Patterson Associates.",
+      slug: "yukari-house-tanev-muir"
+    }
+  ];
 
   return (
     <div className={styles.container}>
@@ -236,6 +281,12 @@ export default function ArticlesPage() {
               <li><Link href="/articles/yukari-house-tanev-muir">Video Feature Yukari House by Tanev Muir Architects</Link></li>
             </ul>
           </div>
+
+          {/* Replace hard-coded trending section with TrendingNow component */}
+          <TrendingNow 
+            articles={trendingArticles} 
+            heading="TRENDING NOW"
+          />
         </div>
       </div>
     </div>
